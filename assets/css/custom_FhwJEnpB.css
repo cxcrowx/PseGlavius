@@ -1,0 +1,132 @@
+/* Panel Top 04 */
+.panel .sections .menu li a {
+  color: #202020;
+  opacity: 1 !important;
+}
+
+.panel .sections .menu li a:hover {
+  opacity: 0.8 !important;
+}
+
+.wallpapers-button {
+  padding: 9px 16px !important;
+  min-width: 92px;
+  font-size: 18px;
+}
+
+.wallpapers-search-button {
+  padding: 12px 10px 3px !important;
+  min-width: 42px;
+  min-height: 42px;
+}
+
+.wallpapers-top-panel-line {
+  border-bottom: 1px solid #999999;
+}
+
+/* First Screen (#1) */
+.wallpapers-price {
+  min-width: 108px;
+  padding: 3px 15px !important;
+}
+
+@media (max-width: 435px) {
+  .wallpapers-price {
+    min-width: unset;
+    padding: 6px 15px;
+  }
+
+  .wallpapers-price p {
+    font-size: 18px;
+  }
+}
+/* Section 4 (#5) */
+.wallpapers-prices-2 {
+  min-height: 100vh;
+  overflow: hidden;
+  border-radius: 40px !important;
+}
+
+@media (min-width: 768px) {
+  .wallpapers-prices-2 {
+    min-height: 580px;
+  }
+}
+.wallpapers-border-right {
+  border-right: 1px solid #999999;
+}
+
+@media (max-width: 435px) {
+  .wallpapers-border-right {
+    border-right: none !important;
+  }
+}
+.wallpapers-border-right-2 {
+  border-right: 1px solid #999999;
+}
+
+@media (max-width: 1023px) {
+  .wallpapers-border-right-2 {
+    border-right: none !important;
+  }
+}
+.wallpapers-border-top {
+  border-top: 1px solid #999999;
+}
+
+@media (min-width: 436px) {
+  .wallpapers-border-top {
+    border-top: none !important;
+  }
+}
+.wallpapers-border-top-2 {
+  border-top: 1px solid #999999;
+}
+
+@media (min-width: 1024px) {
+  .wallpapers-border-top-2 {
+    border-top: none !important;
+  }
+}
+/* Section 5 (#6) */
+[data-slider-id=slider-wallpapers-offers] .dot {
+  width: 6px !important;
+  height: 6px !important;
+}
+
+@media (max-width: 768px) {
+  .wallpapers-slider-controls {
+    position: absolute;
+    bottom: -60px;
+  }
+}
+/* Subscribe (#7) */
+.wallpapers-input-panel {
+  min-height: 62px;
+  min-width: 236px;
+  font-size: 20px;
+}
+
+.wallpapers-padding-button {
+  padding: 21px 21px 14px;
+}
+
+/* Panel Bottom 12 */
+.panel .sections .menu li a {
+  color: #202020;
+  opacity: 1 !important;
+}
+
+.panel .sections .menu li a:hover {
+  opacity: 0.8 !important;
+}
+
+.wallpapers-button {
+  padding: 9px 16px !important;
+  min-width: 92px;
+  font-size: 18px;
+}
+
+.wallpapers-bottom-panel-line {
+  border-top: 1px solid #999999;
+}

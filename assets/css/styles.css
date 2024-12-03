@@ -1,0 +1,92 @@
+/* Font styles */
+.slides,
+.slides p {
+    font-family: "Poppins", -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen-Sans,Ubuntu,Cantarell,"Helvetica Neue",sans-serif;
+    font-weight: 400;
+}
+
+.slides h1,
+.slides h2,
+.slides h3,
+.slides h4,
+.slides h5,
+.slides h6 {
+    font-family: "Poppins", -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen-Sans,Ubuntu,Cantarell,"Helvetica Neue",sans-serif;
+    font-weight: 500;
+}
+
+.slides .button,
+.slides .slides-form {
+    font-family: "Poppins", -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen-Sans,Ubuntu,Cantarell,"Helvetica Neue",sans-serif;
+    font-weight: 600;
+}
+
+/* Layout styles */
+.wallpapers-flex-column {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+}
+
+.wallpapers-self-stretch {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.wallpapers-background {
+    background-color: #F2F2F2 !important;
+}
+
+/* Border radius utilities */
+.rounded {
+    border-radius: 10px !important;
+}
+
+.rounded-15 {
+    border-radius: 15px !important;
+}
+
+.rounded-20 {
+    border-radius: 20px !important;
+}
+
+.rounded-40 {
+    border-radius: 40px !important;
+}
+
+/* Button styles */
+@media(min-width: 768px) {
+    .button.wallpapers-big-btn {
+        font-size: 21px;
+        line-height: 2;
+    }
+}
+
+/* Prices section */
+.wallpapers-prices {
+    min-height: 100vh;
+    overflow: hidden;
+    border-radius: 40px !important;
+}
+
+@media(min-width: 1240px) {
+    .wallpapers-prices {
+        min-height: 1040px;
+    }
+}
+
+.wallpapers-pad {
+    box-shadow: none !important;
+    border: 1px solid #999999 !important;
+    border-radius: 30px !important;
+    background: #F2F2F2 !important;
+}
+
+.wallpapers-more-button {
+    padding-top: 8px !important;
+    padding-bottom: 8px !important;
+    font-size: 18px;
+    line-height: 26px;
+}
