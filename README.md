@@ -18,7 +18,7 @@ PseGlavius is a modern web-based financial management platform designed to help 
   - Recharge
   - Invest
   - Withdraw
-  - Invite friends
+  - Invite friendss
 
 ## Technology Stack
 
