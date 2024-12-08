@@ -1,0 +1,4 @@
+$blue: #2f80ed;
+$gray: #999999;
+$white: #ffffff;
+@include generateColors('white',$white);

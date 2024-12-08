@@ -1,0 +1,70 @@
+/* Section 4 (#4) */
+.wallpapers-prices-2 {
+  min-height: 100vh;
+  overflow: hidden;
+  border-radius: 40px !important;
+}
+
+@media (min-width: 768px) {
+  .wallpapers-prices-2 {
+    min-height: 580px;
+  }
+}
+.wallpapers-border-right {
+  border-right: 1px solid #999999;
+}
+
+@media (max-width: 435px) {
+  .wallpapers-border-right {
+    border-right: none !important;
+  }
+}
+.wallpapers-border-right-2 {
+  border-right: 1px solid #999999;
+}
+
+@media (max-width: 1023px) {
+  .wallpapers-border-right-2 {
+    border-right: none !important;
+  }
+}
+.wallpapers-border-top {
+  border-top: 1px solid #999999;
+}
+
+@media (min-width: 436px) {
+  .wallpapers-border-top {
+    border-top: none !important;
+  }
+}
+.wallpapers-border-top-2 {
+  border-top: 1px solid #999999;
+}
+
+@media (min-width: 1024px) {
+  .wallpapers-border-top-2 {
+    border-top: none !important;
+  }
+}
+/* Section 5 (#5) */
+[data-slider-id=slider-wallpapers-offers] .dot {
+  width: 6px !important;
+  height: 6px !important;
+}
+
+@media (max-width: 768px) {
+  .wallpapers-slider-controls {
+    position: absolute;
+    bottom: -60px;
+  }
+}
+/* Subscribe (#6) */
+.wallpapers-input-panel {
+  min-height: 62px;
+  min-width: 236px;
+  font-size: 20px;
+}
+
+.wallpapers-padding-button {
+  padding: 21px 21px 14px;
+}

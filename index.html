@@ -1,258 +1,589 @@
-<!DOCTYPE html>
-<html class="firefox osx desktop retina scrollable page-ready page-loaded">
+<!doctype html>
+<html>
 <head>
-    <!-- Head content remains unchanged -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1.0">
-    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <base href="./">
+    <title>Main page</title>
+    <meta property="og:title" content="Main page" />
+    <meta name="twitter:title" content="Main page" />
+    <meta name="description" content="This is the main (index) page of your project." />
+    <meta name="og:description" content="This is the main (index) page of your project." />
+    <meta name="twitter:description" content="This is the main (index) page of your project." />
+    <link rel="icon" sizes="any" href="assets/svg/favicon-default.svg" type="image/svg+xml">
 
-    <title>PseGlavius Shared Center</title>
-    <meta property="og:title" content="PseGlavius Shared Center">
-    <meta name="twitter:title" content="PseGlavius Shared Center">
-    <meta name="description" content="Welcome to PseGlavius Shared Center - Your Financial Management Platform">
-    <meta name="og:description" content="Welcome to PseGlavius Shared Center - Your Financial Management Platform">
-    <meta name="twitter:description" content="Welcome to PseGlavius Shared Center - Your Financial Management Platform">
-    <meta name="og:image" content="assets/images/screenshot-2024-09-11-at-22-09-55.png">
-    <meta name="twitter:image" content="assets/images/screenshot-2024-09-11-at-22-09-55.png">
-    <link rel="icon" sizes="any" href="https://designmodo.com/slides/app/assets/svg/favicon-default.svg" type="image/svg+xml">
+    <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin>
+    <link href="css/slides-customized.min.css?p=ghFS4UVm&rnd=893955" rel="stylesheet" type="text/css" id="js-slides-css">
 
-    <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin="">
-    <script src="assets/js/jquery.min.js"></script>
-    <link href="assets/css/slides-customized.min.css" rel="stylesheet" type="text/css" id="js-slides-css">
-    <link rel="stylesheet" as="font" href="assets/css/css2.css" id="js-google-fonts">
-    <link href="assets/css/custom_FhwJEnpB.css" rel="stylesheet" type="text/css">
-    <link href="assets/css/styles.css" rel="stylesheet" type="text/css">
-    <link rel="preload" href="https://designmodo.com/slides/app/assets/svg/icon-set.svg?p=PTgBZRI6" as="image" type="image/svg+xml" crossorigin="">
-    <script src="assets/js/slides.min.js"></script>
-    <style>
-        /* Dark theme styles */
-        body {
-            background-color: #1a1a1a;
-            color: #ffffff;
+    
+    <!-- Fonts and Material Icons -->
+    <link rel="stylesheet" as="font" href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;500;700&family=Material+Icons&display=swap" id="js-google-fonts"/>
+
+    <style type="text/css" id="js-slides-fonts">
+        .slides,
+        .slides p {
+            font-family: "Nunito", -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen-Sans,Ubuntu,Cantarell,"Helvetica Neue",sans-serif;
+            font-weight: 400;
         }
-        .logo-image {
-            height: 60px;
-            width: auto;
-            vertical-align: middle;
-            transition: transform 0.3s ease;
-            background-color: #1a1a1a;
-            padding: 10px;
-            border-radius: 8px;
+        .slides h1,
+        .slides h2,
+        .slides h3,
+        .slides h4,
+        .slides h5,
+        .slides h6 {
+            font-family: "Nunito", -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen-Sans,Ubuntu,Cantarell,"Helvetica Neue",sans-serif;
+            font-weight: 700;
         }
-        .logo-image:hover {
-            transform: scale(1.05);
-        }
-        .whiteSlide {
-            background-color: #1a1a1a !important;
-        }
-        .wallpapers-background {
-            background-color: #1a1a1a !important;
-        }
-        .panel.bottom, .panel.top {
-            background-color: #1a1a1a !important;
-        }
-        .button.white {
-            background: #333333;
-            color: #ffffff;
-        }
-        .menu li a {
-            color: #ffffff !important;
-            text-decoration: none;
-            transition: opacity 0.3s ease;
-        }
-        .menu li a:hover {
-            opacity: 0.8;
-        }
-        .button.wallpapers-button {
-            color: #000000 !important;
-            border: 1px solid #ffffff;
-            background: #ffffff;
-            transition: all 0.3s ease;
-        }
-        .button.wallpapers-button:hover {
-            background-color: rgba(255, 255, 255, 0.9);
-            border-color: rgba(255, 255, 255, 0.9);
-        }
-        /* Override color for non-button menu items */
-        .menu li a:not(.button) {
-            color: #ffffff !important;
-        }
-        .hr.gray {
-            background: #333333;
-        }
-        .wallpapers-pad {
-            background: #262626;
-            border-radius: 15px;
-            margin: 10px;
-            transition: transform 0.3s ease;
-        }
-        .wallpapers-pad:hover {
-            transform: translateY(-5px);
-        }
-        .quick-action {
-            text-align: center;
-            padding: 20px;
-            background: #262626;
-            border-radius: 15px;
-            margin: 10px;
-            transition: all 0.3s ease;
-        }
-        .quick-action:hover {
-            transform: translateY(-5px);
-            background: #333333;
-        }
-        .quick-action img {
-            width: 48px;
-            height: 48px;
-            margin-bottom: 10px;
-        }
-        .quick-action h4 {
-            color: #ffffff;
-            margin: 0;
-        }
-        .investment-card {
-            background: #262626;
-            border-radius: 15px;
-            padding: 20px;
-            margin: 10px;
-            transition: all 0.3s ease;
-        }
-        .investment-card:hover {
-            transform: translateY(-5px);
-            background: #333333;
-        }
-        .investment-card img {
-            width: 100%;
-            border-radius: 10px;
-            margin-bottom: 15px;
-        }
-        .investment-card h4 {
-            color: #ffffff;
-            margin: 0;
-        }
-        /* Additional styles to ensure all text is white */
-        h1, h2, h3, h4, h5, h6 {
-            color: #ffffff !important;
-        }
-        .largest {
-            color: #ffffff !important;
-        }
-        .smallest {
-            color: #ffffff !important;
-        }
-        p, span, div {
-            color: #ffffff;
+        .slides .button,
+        .slides .slides-form {
+            font-family: "Nunito", -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen-Sans,Ubuntu,Cantarell,"Helvetica Neue",sans-serif;
+            font-weight: 500;
         }
     </style>
+<link href="css/custom_GzhMgOBD.css?p=ghFS4UVm&rnd=734500" rel="stylesheet" type="text/css">    <style>
+.wallpapers-flex-column{
+    display:flex;
+    flex-wrap:wrap;
+    flex-direction: column;
+}
+.wallpapers-self-stretch{
+    flex-grow:1;
+    display:flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.wallpapers-background {background-color: #F2F2F2 !important;}
+.rounded {
+    border-radius: 10px !important;
+}
+.rounded-15{
+    border-radius: 15px !important;
+}
+.rounded-20{
+    border-radius: 20px !important;
+}
+.rounded-40{
+    border-radius: 40px !important;
+}
+@media(min-width: 768px){
+    .button.wallpapers-big-btn{
+        font-size:21px;
+        line-height:2;
+    }
+}
+.wallpapers-prices{
+    min-height:100vh;
+    overflow:hidden;
+    border-radius: 40px !important;
+}
+@media(min-width: 1240px){
+    .wallpapers-prices{
+        min-height:1040px;
+    }
+}
+.wallpapers-pad {
+    box-shadow: none !important;
+    border: 1px solid #999999 !important;
+    border-radius: 30px !important;
+    background: #F2F2F2 !important;
+}
+.wallpapers-more-button {
+    padding-top: 8px !important;
+    padding-bottom: 8px !important;
+    font-size:18px;
+    line-height: 26px;
+}
+</style>
+    <link rel="preload" href="assets/svg/icon-set.svg?p=ghFS4UVm" as="image" type="image/svg+xml" crossorigin>
+
 </head>
-<body class="slides scroll animated whiteSlide lastSlide stage-7">
-<!-- Panel Top -->
-<nav class="panel top padding-top-2 padding-bottom-0 wallpapers-background">
-  <div class="sections desktop wallpapers-top-panel-line fix-12-12 padding-bottom-2">
-    <div class="left"><a href="#" title="PseGlavius" class="block"><img src="assets/icons/wallpapers-logo.svg" alt="PseGlavius Logo" class="logo-image"></a></div>
+<body class="slides stack smooth fast stickyScroll animated noPreload">
+<!-- Navigation -->
+<nav class="side square medium">
+  <div class="navigation default">
+    <ul></ul>
+  </div>
+</nav><!-- Panel Top 11 -->
+<div data-cid="panel-top-11-523a996e">
+<nav class="panel top black firstSlideOnly">
+  <!-- desktop version -->
+  <div class="sections desktop">
+    <div class="left"><a href="#" title="Slides Framework"><svg style="width:82px;height:24px"><use href="assets/uploads/wallpapers-logo.svg?p=ghFS4UVm"></use></svg></a></div>
     <div class="center">
       <ul class="menu">
-        <li><a href="#" class="font-size-18">Home</a></li>
-        <li><a href="#" class="font-size-18">Investment</a></li>
-        <li><a href="#" class="font-size-18">My Promotion</a></li>
-        <li><a href="#" class="font-size-18">Personal</a></li>
+        <li><a href="#">Main</a></li>
+        <li><a href="#">Upgrade</a></li>
+        <li><a href="#">Help</a></li>
+        <li><a href="#">Explore</a></li>
       </ul>
     </div>
-    <div class="right">
-      <ul class="menu trimRight">
-        <li><a class="button wallpapers-button flat white rounded" href="login.html">Login</a></li>
-        <li><a class="button wallpapers-button flat white rounded" href="register.html">Register</a></li>
-        <li class="cropRight"><a class="button wallpapers-search-button flat white rounded" href="#"><img src="assets/icons/wallpapers-search.svg" alt="Search"></a></li>
-      </ul>
-    </div>
+    <div class="right"><a href="#" class="button hollow"><img src="assets/img/appstore.jpg" width="112" height="42"/></a></div>
+  </div>
+  <!-- compact version -->
+  <div class="sections compact hidden">
+    <div class="left"><a href="#" title="Slides Framework"><svg style="width:82px;height:24px"><use href="assets/svg/icons.svg#logo"></use></svg></a></div>
+    <div class="right"><span class="button actionButton sidebarTrigger" data-sidebar-id="1"><svg><use href="assets/svg/icons.svg#menu"></use></svg></span></div>
   </div>
 </nav>
 
-<!-- Rest of the content remains unchanged -->
-<!-- First Screen -->
-<section class="slide whiteSlide wallpapers-background animate active">
+<!-- Sidebar -->
+<nav class="sidebar" data-sidebar-id="1">
+  <div class="close"><svg><use href="assets/svg/icons.svg#close"></use></svg></div>
+  <div class="content">
+    <a href="#" class="logo"><svg width="100" height="30"><use href="assets/svg/icons.svg#logo"></use></svg></a>
+    <ul class="mainMenu margin-top-3">
+      <li><a href="#">All Goods</a></li>
+      <li><a href="#">UI Kits</a></li>
+      <li><a href="#">Icons</a></li>
+      <li><a href="#">Mockups</a></li>
+      <li><a href="#">Toolkit</a></li>
+    </ul>
+    <ul class="subMenu small opacity-8">
+      <li><a href="#">Submit Product</a></li>
+      <li><a href="#">FAQ</a></li>
+      <li><a href="#">License</a></li>
+      <li><a href="#">Terms & Conditions</a></li>
+      <li><a href="#">Privacy Policy</a></li>
+      <li><a href="#">Contact Us</a></li>
+    </ul>
+    <ul class="social opacity-8">
+      <li><a href="#"><svg><use href="assets/svg/icons.svg#facebook"></use></svg></a></li>
+      <li><a href="#"><svg><use href="assets/svg/icons.svg#twitter"></use></svg></a></li>
+      <li><a href="#"><svg><use href="assets/svg/icons.svg#instagram"></use></svg></a></li>
+    </ul>
+  </div>
+</nav>
+</div>
+<!-- Slide 34 (#1) -->
+<section data-cid="slide-34-11362661" class="slide fade-6 kenBurns" data-title="Slide 34">
   <div class="content">
     <div class="container">
       <div class="wrap">
-        <!-- Welcome Header -->
-        <div class="fix-12-12 margin-bottom-4">
-          <h1 class="largest weight-4">Welcome to use</h1>
-          <h1 class="largest weight-6">PseGlavius Shared Center</h1>
-        </div>
-
-        <!-- Quick Actions -->
-        <div class="fix-12-12 margin-bottom-6">
-          <ul class="flex fixedSpaces">
-            <li class="col-3-12">
-              <div class="quick-action">
-                <img src="assets/icons/wallpapers-star.svg" alt="Recharge">
-                <h4>Recharge</h4>
-              </div>
-            </li>
-            <li class="col-3-12">
-              <div class="quick-action">
-                <img src="assets/icons/wallpapers-star.svg" alt="Invest">
-                <h4>Invest</h4>
-              </div>
-            </li>
-            <li class="col-3-12">
-              <div class="quick-action">
-                <img src="assets/icons/wallpapers-star.svg" alt="Withdraw">
-                <h4>Withdraw</h4>
-              </div>
-            </li>
-            <li class="col-3-12">
-              <div class="quick-action">
-                <img src="assets/icons/wallpapers-star.svg" alt="Invite">
-                <h4>Invite</h4>
-              </div>
-            </li>
-          </ul>
-        </div>
-
-        <!-- Featured Financial Management -->
-        <div class="fix-12-12 margin-bottom-4">
-          <h2 class="margin-bottom-2 smallest">Featured Financial Management</h2>
-          <ul class="flex fixedSpaces">
-            <li class="col-4-12">
-              <div class="investment-card">
-                <img src="assets/images/wallpapers-2-1.jpg" alt="Newbie Investment">
-                <h4>Newbie Investment</h4>
-              </div>
-            </li>
-            <li class="col-4-12">
-              <div class="investment-card">
-                <img src="assets/images/wallpapers-2-2.jpg" alt="Level 2 Investment">
-                <h4>Level 2 Investment</h4>
-              </div>
-            </li>
-            <li class="col-4-12">
-              <div class="investment-card">
-                <img src="assets/images/wallpapers-2-3.jpg" alt="Level 3 Investment">
-                <h4>Level 3 Investment</h4>
-              </div>
-            </li>
-          </ul>
-        </div>
-
-        <!-- Popular Recommendations -->
+      
         <div class="fix-12-12">
-          <h2 class="margin-bottom-2 smallest">Popular recommendations</h2>
-          <div class="wallpapers-pad padding-2">
-            <div class="flex verticalCenter">
-              <div class="col-10-12">
-                <h4>Featured Financial Management</h4>
+          <ul class="flex verticalCenter reverse">
+            <li class="col-6-12 left middle">
+              <div class="fix-5-12 toLeft margin-left-tablet-auto margin-right-tablet-auto">
+                <h1 class="ae-1 fromLeft smaller margin-bottom-2">Это главная страница которая появляется после успешного входа</h1>
+                <p class="ae-2 fromLeft large margin-bottom-4"><span class="opacity-8">Тут можно разместить любые кнопки, интерфейс, и прочую хрень. Справа будет фото дрона который можно кнопкой отправить на работу. Также тут будет таймер обратного отсчета времени.</span></p>
+                <a class="button blue rounded ae-3 fromCenter cropLeft wideForPhone">Закинуть еще деняк</a><a class="button white rounded ae-4 fromCenter wideForPhone">Отправить дрон на работу</a>
               </div>
-              <div class="col-2-12 align-right">
-                <img src="assets/icons/wallpapers-arrow.svg" alt="Arrow">
-              </div>
+            </li>
+            <li class="col-6-12">
+              <img class="ae-4 margin-bottom-tablet-4" width="580" styles="margin:-28% 0" src="assets/uploads/untitled-1-5x.png?p=ghFS4UVm" alt="iPhones Thumbnail" data-action="zoom"/>
+            </li>
+          </ul>
+        </div>
+        
+      </div>
+    </div>
+  </div>
+  <div class="background" style="background-image:url(assets/img/background/img-35.jpg)"></div>
+</section>
+<!-- Section 2 (#2) -->
+<section data-cid="slide-02-98cd87bd" class="slide whiteSlide wallpapers-background" data-title="Slide 34">
+  <div class="content">
+    <div class="container">
+      <div class="wrap padding-top-4 padding-bottom-0">
+        <div class="fix-12-12">
+          <div class="margin-bottom-2 flex verticalCenter fixedSpaces">
+            <div class="col-10-12 col-tablet-3-5 col-phablet-1-1">
+              <h2 class="smallest align-left crop ae-1">Магазин оборудования</h2> 
+            </div>
+            <div class="margin-top-phablet-2 col-2-12 col-tablet-2-5 col-phablet-1-1 align-right phablet-align-left">
+              <a href="#" class="crop button flat white rounded wallpapers-more-button ae-1">See All<img src="assets/svg/template/wallpapers-arrow.svg" class="margin-left-1 middle"></a>
             </div>
           </div>
+
+
+          <ul class="flex fixedSpaces equal later"> 
+            <li class="margin-bottom-phablet-5 col-6-12 col-tablet-1-2 col-phablet-1-1">
+              <div class="wallpapers-pad padding-0 ae-2">
+                <div class="padding-2">
+                  <img srcset="assets/uploads/layer-2.png?p=ghFS4UVm 2x" src="assets/uploads/layer-2.png?p=ghFS4UVm" alt="Picture" class="block wide rounded-15" />
+                </div>
+                <div class="padding-2">
+                  <div class="equalElement">
+                    <h4 class="margin-bottom-1">Модэль дрона 1</h4>
+                    <h4 class="margin-bottom-2 crop small">$15.99</h4>
+                    <div class="margin-bottom-2 hr gray"></div>
+                    
+                  </div>
+                  <a href="#" class="crop margin-top-5 button flat white rounded-20 wide">+ ADD TO CART</a>
+                </div>
+              </div>
+            </li>
+            <li class="margin-bottom-phablet-5 col-6-12 col-tablet-1-2 col-phablet-1-1">
+              <div class="wallpapers-pad padding-0 ae-3">
+                <div class="padding-2">
+                  <img srcset="assets/uploads/layer-3-2.png?p=ghFS4UVm 2x" src="assets/uploads/layer-3-2.png?p=ghFS4UVm" alt="Picture" class="block wide rounded-15" />
+                </div>
+                <div class="padding-2">
+                  <div class="equalElement">
+                    <h4 class="margin-bottom-1">Модэль дрона 2</h4>
+                    <h4 class="margin-bottom-2 crop small">$69.99</h4>
+                    <div class="margin-bottom-2 hr gray"></div>
+                    
+                  </div>
+                  <a href="#" class="crop margin-top-5 button flat white rounded-20 wide">+ ADD TO CART</a>
+                </div>
+              </div>
+            </li>
+          </ul>
+          <div class="margin-top-6 hr gray ae-5"></div>
         </div>
       </div>
     </div>
   </div>
 </section>
+<!-- Section 3 (#3) -->
+<section data-cid="slide-03-c9ff2a0e" class="slide whiteSlide wallpapers-background" data-title="Section 3">
+  <div class="content">
+    <div class="container">
+      <div class="wrap padding-top-4 padding-bottom-0">
+        <div class="fix-12-12">
+          <div class="margin-bottom-2 flex verticalCenter fixedSpaces">
+            <div class="col-10-12 col-tablet-3-5 col-phablet-1-1">
+              <h2 class="smallest align-left crop ae-1">Аккумуляторы для дронов</h2> 
+            </div>
+            <div class="margin-top-phablet-2 col-2-12 col-tablet-2-5 col-phablet-1-1 align-right phablet-align-left">
+              <a href="#" class="crop button flat white rounded wallpapers-more-button ae-1">See All<img src="assets/svg/template/wallpapers-arrow.svg" class="margin-left-1 middle"></a>
+            </div>
+          </div>
 
+
+          <ul class="flex fixedSpaces equal later"> 
+            <li class="margin-bottom-phablet-5 col-4-12 col-tablet-1-3 col-phablet-1-1">
+              <div class="wallpapers-pad padding-0 ae-2">
+                <div class="padding-2">
+                  <img srcset="assets/uploads/layer-2.jpg?p=ghFS4UVm 2x" src="assets/uploads/layer-2.jpg?p=ghFS4UVm" alt="Picture" class="block wide rounded-15" />
+                </div>
+                <div class="padding-2">
+                  <div class="equalElement">
+                    <h4 class="margin-bottom-1">Аккумулятор 1</h4>
+                    <h4 class="margin-bottom-2 crop small">$5.49</h4>
+                    <div class="margin-bottom-2 hr gray"></div>
+                    <p class="margin-bottom-1">Unlock the limits of your&nbsp;brain</p>
+                    <p class="opacity-5">Amaran Labs</p>
+                  </div>
+                  <a href="#" class="crop margin-top-5 button flat white rounded-20 wide">+ ADD TO CART</a>
+                </div>
+              </div>
+            </li>
+            <li class="margin-bottom-phablet-5 col-4-12 col-tablet-1-3 col-phablet-1-1">
+              <div class="wallpapers-pad padding-0 ae-3">
+                <div class="padding-2">
+                  <img srcset="assets/uploads/layer-2-3.jpg?p=ghFS4UVm 2x" src="assets/uploads/layer-2-3.jpg?p=ghFS4UVm" alt="Picture" class="block wide rounded-15" />
+                </div>
+                <div class="padding-2">
+                  <div class="equalElement">
+                    <h4 class="margin-bottom-1">Аккумулятор 2</h4>
+                    <h4 class="margin-bottom-2 crop small">$11.99</h4>
+                    <div class="margin-bottom-2 hr gray"></div>
+                    <p class="margin-bottom-1">Neural imagination of&nbsp;sight</p>
+                    <p class="opacity-5">antoniyo</p>
+                  </div>
+                  <a href="#" class="crop margin-top-5 button flat white rounded-20 wide">+ ADD TO CART</a>
+                </div>
+              </div>
+            </li>
+            <li class="col-4-12 col-tablet-1-3 col-phablet-1-1">
+              <div class="wallpapers-pad padding-0 ae-4">
+                <div class="padding-2">
+                  <img srcset="assets/uploads/layer-2-2.jpg?p=ghFS4UVm 2x" src="assets/uploads/layer-2-2.jpg?p=ghFS4UVm" alt="Picture" class="block wide rounded-15" />
+                </div>
+                <div class="padding-2">
+                  <div class="equalElement">
+                    <h4 class="margin-bottom-1">Аккумулятор 3</h4>
+                    <h4 class="margin-bottom-2 crop small">$32.99</h4>
+                    <div class="margin-bottom-2 hr gray"></div>
+                    <p class="margin-bottom-1">Outstanding complex of&nbsp;colors</p>
+                    <p class="opacity-5">Jerar Johnson</p>
+                  </div>
+                  <a href="#" class="crop margin-top-5 button flat white rounded-20 wide">+ ADD TO CART</a>
+                </div>
+              </div>
+            </li>
+          </ul>
+          <div class="margin-top-6 hr gray ae-5"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- Section 4 (#4) -->
+<section data-cid="slide-04-71bef641" class="slide whiteSlide wallpapers-background" data-title="Section 4">
+  <div class="content">
+    <div class="container">
+      <div class="wrap align-left padding-top-4 padding-bottom-0">
+        <div class="fix-12-12">
+          <ul class="flex fixedSpaces">
+            <li class="margin-bottom-phablet-4 col-9-12 col-tablet-1-2 col-phablet-1-1 fromLeft">
+              <div class="fix-6-12 toLeft">
+                <h1 class="margin-bottom-2 small weight-5 ae-1">Outspace Full&nbsp;Pack</h1>
+                  <p class="margin-bottom-5 large opacity-8 ae-2">Mario?s special templates for everyone. Create amazing experiences with a fully prepared&nbsp;pack.</p>
+                    <div class="toLeft flex verticalCenter ae-3">
+                      <img srcset="assets/img/template/wallpapers-5-1.jpg 2x" src="assets/img/template/wallpapers-5-1.jpg" alt="Picture" class="rounded margin-right-1" width="42" height="42">
+                      <p class="inline margin-bottom-0"><span class="opacity-5">Created by </span><span class="weight-5">Mario Arthur</span><span class="opacity-5"> in </span><span class="weight-5">Abstract Templates</span></p>
+                    </div>
+                
+              </div>
+            </li>
+            <li class="col-3-12 col-phablet-1-1 col-tablet-1-2">
+              <h1 class="smaller weight-4 center margin-bottom-2 ae-4">$119.99</h1>
+              <a href="#" class="crop button wide white flat big wallpapers-big-btn rounded-20 ae-5">+ ADD TO CART</a>
+            </li>
+          </ul>
+            <ul class="fix-12-12 margin-bottom-6 margin-top-4 padding-2 flex align-center wallpapers-pad ae-6">
+              <li class="col-3-12 col-tablet-1-2 col-phablet-1-2 col-phone-1-1 wallpapers-border-right">
+                <p class="margin-bottom-1 large opacity-5 margin-top-2">Compatible With</p>
+                <h4 class="crop smaller margin-bottom-2">Figma, Sketch</h4>
+              </li>
+              <li class="col-3-12 col-tablet-1-2 col-phablet-1-2 col-phone-1-1 wallpapers-border-right-2 wallpapers-border-top">
+                <p class="margin-bottom-1 large opacity-5 margin-top-2">Amount of Files</p>
+                <h4 class="crop smaller margin-bottom-2">48+ Wallpapers</h4>
+              </li>
+              <li class="col-3-12 col-tablet-1-2 col-phablet-1-2 col-phone-1-1 wallpapers-border-right wallpapers-border-top-2">
+                <p class="margin-bottom-1 large opacity-5 margin-top-2">Released</p>
+                <h4 class="crop smaller margin-bottom-2">October 19, 2019</h4>
+              </li>
+              <li class="col-3-12 col-tablet-1-2 col-phablet-1-2 col-phone-1-1 wallpapers-border-top-2">
+                <p class="margin-bottom-1 large opacity-5 margin-top-2">Last Update</p>
+                <h4 class="crop smaller margin-bottom-2">November 9, 2020</h4>
+              </li>
+            </ul>
+            <p class="weight-5 margin-bottom-2 ae-7">General Wallpapers</p>
+            <ul class="flex fixedSpaces fromBlur ae-7">
+              <li class="col-6-12 col-tablet-1-2 col-phablet-1-1">
+                <ul class="flex fixedSpaces">
+                  <li class="col-6-12 col-tablet-1-2 col-phablet-1-2 col-phone-1-1">
+                    <img srcset="assets/img/template/wallpapers-5-2-1.jpg 2x" class="margin-bottom-2 rounded-40 wide block" src="assets/img/template/wallpapers-5-2-1.jpg">
+                  </li>
+                  <li class="col-6-12 col-tablet-1-2 col-phablet-1-2 col-phone-1-1">
+                    <img srcset="assets/img/template/wallpapers-5-2-2.jpg 2x" class="margin-bottom-2 rounded-40 wide block" src="assets/img/template/wallpapers-5-2-2.jpg">
+                  </li>
+                </ul>
+                <img srcset="assets/img/template/wallpapers-5-2-3.jpg 2x" class="rounded-40 margin-bottom-tablet-2 wide block" src="assets/img/template/wallpapers-5-2-3.jpg">
+              </li>
+              <li class="col-6-12 col-tablet-1-2 col-phablet-1-1">
+                <img srcset="assets/img/template/wallpapers-5-2-4.jpg 2x" class="rounded-40 margin-bottom-2 wide block" src="assets/img/template/wallpapers-5-2-4.jpg">
+                <img srcset="assets/img/template/wallpapers-5-2-5.jpg 2x" class="rounded-40 wide block" src="assets/img/template/wallpapers-5-2-5.jpg">
+              </li>
+            </ul>
+          <p class="weight-5 margin-bottom-2 margin-top-6 ae-8">Author?s Special</p>
+          <ul class="flex fixedSpaces fromBlur ae-8">
+            <li class="col-6-12 col-tablet-1-2 col-phablet-1-1 wallpapers-flex-column">
+              <div class="wide relative block-149 wallpapers-background">
+                <div>
+                  <img srcset="assets/img/template/wallpapers-5-3-1.jpg 2x" class="rounded-40 margin-bottom-2 wide block" src="assets/img/template/wallpapers-5-3-1.jpg">
+                </div>
+                
+              </div>
+              <div class="wide relative block-149 wallpapers-self-stretch wallpapers-background">
+                <img srcset="assets/img/template/wallpapers-5-3-2.jpg 2x" class="rounded-40 margin-bottom-tablet-2 wide block" src="assets/img/template/wallpapers-5-3-2.jpg">
+              </div>
+            </li>
+            <li class="col-6-12 col-tablet-1-2 col-phablet-1-1 wallpapers-flex-column">
+              <div class="wide relative block-149 wallpapers-background">
+                <img srcset="assets/img/template/wallpapers-5-3-3.jpg 2x" class="rounded-40 margin-bottom-2 wide block" src="assets/img/template/wallpapers-5-3-3.jpg">
+              </div>
+              <div class="wide relative block-149 wallpapers-self-stretch wallpapers-background">
+                <img srcset="assets/img/template/wallpapers-5-3-4.jpg 2x" class="rounded-40 wide block" src="assets/img/template/wallpapers-5-3-4.jpg">
+              </div>
+            </li>
+          </ul>
+          <div class="margin-top-6 hr gray ae-9"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- Section 5 (#5) -->
+<section data-cid="slide-05-71a2103f" class="slide whiteSlide wallpapers-background" data-title="Section 5">
+  <div class="content">
+    <div class="container">
+      <div class="wrap align-left padding-top-4 padding-bottom-0">
+        <div class="fix-12-12 padding-bottom-phablet-8">
+          <div class="relative">
+            <ul class="fix-12-12 flex fixedSpaces verticalCenter margin-bottom-3">
+              <li class=""><h2 class="smallest ae-1">Special Offers</h2></li>
+              <li class="fix-2-12 inlineBlock toRight"><a href="#" class="crop button wide yellow flat rounded padding-top-1 padding-bottom-1 ae-1">UP TO 50% OFF</a></li>
+            </ul>
+
+            <ul class="clickable slider ae-2" data-slider-id="slider-wallpapers-offers">
+              <li class="selected">
+                <img srcset="assets/img/template/wallpapers-6-1.jpg 2x" src="assets/img/template/wallpapers-6-1.jpg" class="margin-bottom-3 rounded-40"/>
+                <ul class="flex noSpaces verticalCenter">
+                  <li class="col-5-12 col-tablet-1-2 col-phablet-1-2 col-phone-1-1 padding-left-7 padding-left-phablet-0">
+                    <h4 class="crop smaller overflow-ellipsis-152">Blood and Milk</h4>
+                    <p class="crop opacity-8 overflow-ellipsis-152">goodesigns</p>
+                  </li>
+                  <li class="col-5-12 col-tablet-1-2 col-phone-1-1 padding-right-7 padding-right-phablet-0 margin-top-phone-1 toRight align-right phone-align-left">
+                    <h4 class="opacity-5 weight-5 inline margin-right-1"><s>$19.99</s></h4>
+                    <h2 class="crop inline smallest">$11.59</h2>
+                  </li>
+                </ul>
+              </li>
+              <li>
+                <img srcset="assets/img/template/wallpapers-6-2.jpg 2x" src="assets/img/template/wallpapers-6-2.jpg" class="margin-bottom-3 rounded-40"/>
+                <ul class="flex noSpaces verticalCenter">
+                  <li class="col-5-12 col-tablet-1-2 col-phablet-1-2 col-phone-1-1 padding-left-7 padding-left-phablet-0">
+                    <h4 class="crop smaller overflow-ellipsis-152">Gradiento</h4>
+                    <p class="crop opacity-8 overflow-ellipsis-152">Jerar Johnson</p>
+                  </li>
+                  <li class="col-5-12 col-tablet-1-2 col-phone-1-1 padding-right-7 padding-right-phablet-0 margin-top-phone-1 toRight align-right phone-align-left">
+                    <h4 class="opacity-5 weight-5 inline margin-right-1"><s>$39.99</s></h4>
+                    <h2 class="crop inline smallest">$29.99</h2>
+                  </li>
+                </ul>
+              </li>
+              <li>
+                <img srcset="assets/img/template/wallpapers-6-3.jpg 2x" src="assets/img/template/wallpapers-6-3.jpg" class="margin-bottom-3 rounded-40"/>
+                <ul class="flex noSpaces verticalCenter">
+                  <li class="col-5-12 col-tablet-1-2 col-phablet-1-2 col-phone-1-1 padding-left-7 padding-left-phablet-0">
+                    <h4 class="crop smaller overflow-ellipsis-152">Abstract Gallery&nbsp;Set 3</h4>
+                    <p class="crop opacity-8 overflow-ellipsis-152">Words and ideas can change the&nbsp;world</p>
+                  </li>
+                  <li class="col-5-12 col-tablet-1-2 col-phone-1-1 padding-right-7 padding-right-phablet-0 margin-top-phone-1 toRight align-right phone-align-left">
+                    <h4 class="opacity-5 weight-5 inline margin-right-1"><s>$29.99</s></h4>
+                    <h2 class="crop inline smallest">$14.99</h2>
+                  </li>
+                </ul>
+              </li>
+              <li>
+                <img srcset="assets/img/template/wallpapers-6-4.jpg 2x" src="assets/img/template/wallpapers-6-4.jpg" class="margin-bottom-3 rounded-40"/>
+                <ul class="flex noSpaces verticalCenter">
+                  <li class="col-5-12 col-tablet-1-2 col-phablet-1-2 col-phone-1-1 padding-left-7 padding-left-phablet-0">
+                    <h4 class="crop smaller overflow-ellipsis-152">Abstract Gallery&nbsp;Set 4</h4>
+                    <p class="crop opacity-8 overflow-ellipsis-152">Words and ideas can change the&nbsp;world</p>
+                  </li>
+                  <li class="col-5-12 col-tablet-1-2 col-phone-1-1 padding-right-7 padding-right-phablet-0 margin-top-phone-1 toRight align-right phone-align-left">
+                    <h4 class="opacity-5 weight-5 inline margin-right-1"><s>$34.99</s></h4>
+                    <h2 class="crop inline smallest">$18.99</h2>
+                  </li>
+                </ul>
+              </li>
+              <li>
+                <img srcset="assets/img/template/wallpapers-6-5.jpg 2x" src="assets/img/template/wallpapers-6-5.jpg" class="margin-bottom-3 rounded-40"/>
+                <ul class="flex noSpaces verticalCenter">
+                  <li class="col-5-12 col-tablet-1-2 col-phablet-1-2 col-phone-1-1 padding-left-7 padding-left-phablet-0">
+                    <h4 class="crop smaller overflow-ellipsis-152">Abstract Gallery&nbsp;Set 5</h4>
+                    <p class="crop opacity-8 overflow-ellipsis-152">Words and ideas can change the&nbsp;world</p>
+                  </li>
+                  <li class="col-5-12 col-tablet-1-2 col-phone-1-1 padding-right-7 padding-right-phablet-0 margin-top-phone-1 toRight align-right phone-align-left">
+                    <h4 class="opacity-5 weight-5 inline margin-right-1"><s>$18.99</s></h4>
+                    <h2 class="crop inline smallest">$9.99</h2>
+                  </li>
+                </ul>
+              </li>
+            </ul>
+            <div class="absolute position-left position-bottom wide wallpapers-slider-controls">
+              <ul class="flex">
+                <li class="col-1-12 col-tablet-1-5 col-phablet-1-4">
+                  <a data-slider-id="slider-wallpapers-offers" data-slider-action="prev" class="crop button actionButton rounded-20 big wallpapers-big-btn white fromLeft ae-4">
+                    <img src="assets/svg/template/wallpapers-arrow-left.svg" alt="Arrow" class="padding-bottom-1">
+                  </a>
+                </li>
+                <li class="col-10-12 col-tablet-3-5 col-phablet-1-2 margin-auto align-center">
+                  <ul class="controller noText controller-152 white inlineBlock padding-1 rounded ae-3" data-slider-id="slider-wallpapers-offers">
+                    <li class="dot selected"></li>
+                    <li class="dot"></li>
+                    <li class="dot"></li>
+                    <li class="dot"></li>
+                    <li class="dot"></li>
+                  </ul>
+                </li>
+                <li class="col-1-12 col-tablet-1-5 col-phablet-1-4 align-right">
+                  <a data-slider-id="slider-wallpapers-offers" data-slider-action="next" class="crop button actionButton rounded-20 big wallpapers-big-btn white fromRight ae-4">
+                    <img src="assets/svg/template/wallpapers-arrow-right.svg" alt="Arrow" class="padding-bottom-1">
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div class="margin-top-8 hr gray ae-9"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- Subscribe (#6) -->
+<section data-cid="slide-06-be1b5a1f" class="slide whiteSlide wallpapers-background" data-title="Subscribe">
+  <div class="content">
+    <div class="container">
+      <div class="wrap align-left">
+        <div class="fix-12-12">
+          <ul class="flex fixedSpaces verticalCenter">
+            <li class="margin-bottom-tablet-4 col-6-12 col-tablet-1-1 fromLeft">
+              <div class="fix-5-12 toLeft">
+                <img src="assets/svg/template/wallpapers-blue-star.svg" alt="Blue Star" class="margin-bottom-6 ae-1">
+                <h1 class="margin-bottom-2 small weight-5 ae-1">Sales &&nbsp;Updates Newsletter</h1>
+                <div class="fix-5-12 toLeft">
+                  <p class="margin-bottom-5 large ae-2">Subscribe to our email newsletter to receive regular updates and upcoming special offers. Only for our&nbsp;fans!</p>
+                </div>
+                <form class="slides-form form-131 ae-3" action="#" autocomplete="off">
+                  <input type="email" name="email" class="crop rounded-20 wallpapers-input-panel" placeholder="Placeholder"/>
+                  <button type="submit" class="crop rounded-20 margin-left-1 button blue wallpapers-padding-button" name="button"><img src="assets/svg/template/wallpapers-arrow-white.svg" alt="Submit Arrow" ></button>
+                </form>
+              </div>
+            </li>
+            <li class="col-6-12 col-tablet-1-1 noText fromRight">
+              <ul class="flex noSpaces wallpapers-prices-2 fromBlur ae-4">
+                <li class="col-7-12 col-tablet-1-2 col-phablet-1-1 wallpapers-flex-column">
+                  <div class="wide relative black block-149">
+                    <div class="poster opacity-7" style="background-image:url(assets/img/template/wallpapers-7-1.jpg)"></div>
+                    <a href="#" class="relative block padding-4 padding-phone-2">  
+
+                      <h2 class="margin-top-12 margin-bottom-1 margin-top-phablet-8 smallest"></h2>
+
+                    </a>
+                  </div>
+                  <div class="wide relative black block-149 wallpapers-self-stretch">
+                    <div class="poster opacity-7" style="background-image:url(assets/img/template/wallpapers-7-3.jpg)"></div>
+                    <div class="align-right padding-4 padding-phone-2">
+
+                    </div>
+                    <a href="#" class="relative block padding-4 padding-phone-2">  
+                      <h2 class="margin-top-11 margin-bottom-1 margin-top-tablet-2 margin-top-phablet-0 smallest weight-6"></h2>
+
+                    </a>
+                  </div>
+                </li>
+                <li class="col-5-12 col-tablet-1-2 col-phablet-1-1 wallpapers-flex-column">
+                  <div class="wide relative black block-149">
+                    <div class="poster opacity-7" style="background-image:url(assets/img/template/wallpapers-7-2.jpg)"></div>
+                    <a href="#" class="relative block padding-4 padding-phone-2">  
+                      <div class="align-right">
+
+                      </div>
+                      <h2 class="padding-top-5 margin-top-20 margin-bottom-1 margin-top-phablet-8 smallest weight-6"></h2>
+
+                    </a>
+                  </div>
+                  <div class="wide relative black block-149 wallpapers-self-stretch">
+                    <div class="poster opacity-7" style="background-image:url(assets/img/template/wallpapers-7-4.jpg)"></div>
+                    <div class="align-right padding-4 padding-phone-2">
+
+                    </div>
+                    <a href="#" class="relative block padding-4 padding-phone-2">  
+                      <h2 class="margin-top-4 margin-bottom-1 margin-top-tablet-2 margin-top-phablet-0 smallest weight-6"></h2>
+
+                    </a>
+                  </div>
+                </li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- jQuery 3.6.0 -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <!-- Compressed Scripts -->
+    <script src="js/slides.min.js?62360" type="text/javascript"></script>
+        
 </body>
 </html>

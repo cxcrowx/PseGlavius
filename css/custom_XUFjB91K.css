@@ -1,0 +1,27 @@
+/* Slide 43 (#1) */
+/* To restrict styles to the current slide, panel, or example use .slide[data-cid="slide-43-deb4f27f"] */
+.slide[data-cid=slide-43-deb4f27f] p.remind-43 {
+  max-width: 350px;
+  line-height: 1.29;
+  margin: 13px auto;
+  text-align: center;
+}
+
+/* Slide 42 (#2) */
+/* To restrict styles to the current slide, panel, or example use .slide[data-cid="slide-42-81d7fe9b"] */
+.slide[data-cid=slide-42-81d7fe9b] .form-42 {
+  max-width: 500px;
+  margin: 0 auto;
+}
+@media (min-width: 1024px) {
+  .slide[data-cid=slide-42-81d7fe9b] .form-42 .form-42-input-1 input {
+    border-top-right-radius: 0 !important;
+    border-bottom-right-radius: 0 !important;
+  }
+  .slide[data-cid=slide-42-81d7fe9b] .form-42 .form-42-input-2 input {
+    border-top-left-radius: 0 !important;
+    border-bottom-left-radius: 0 !important;
+    position: relative;
+    left: -1px;
+  }
+}

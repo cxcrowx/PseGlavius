@@ -1,208 +1,125 @@
-<!DOCTYPE html>
-<html lang="en">
+<!doctype html>
+<html>
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no, minimum-scale=1.0">
-    <title>PseGlavius Shared Center - Login</title>
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
-        }
+    <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1.0">
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <base href="./">
+    <title>login</title>
+    <meta property="og:title" content="login" />
+    <meta name="twitter:title" content="login" />
+    <meta name="description" content="Log In" />
+    <meta name="og:description" content="Log In" />
+    <meta name="twitter:description" content="Log In" />
+    <meta name="og:image" content="assets/uploads/screenshot-2024-12-08-at-12-19-25.png?p=ghFS4UVm" />
+    <meta name="twitter:image" content="assets/uploads/screenshot-2024-12-08-at-12-19-25.png?p=ghFS4UVm" />
+    <link rel="icon" sizes="any" href="assets/svg/favicon-default.svg" type="image/svg+xml">
 
-        body {
-            background-color: #000;
-            color: #fff;
-            min-height: 100vh;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            padding: 20px;
-        }
+    <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin>
+    <link href="css/slides-customized.min.css?p=ghFS4UVm&rnd=709860" rel="stylesheet" type="text/css" id="js-slides-css">
 
-        .header {
-            display: flex;
-            justify-content: space-between;
-            width: 100%;
-            padding: 10px 20px;
-        }
+    
+    <!-- Fonts and Material Icons -->
+    <link rel="stylesheet" as="font" href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;500;700&family=Material+Icons&display=swap" id="js-google-fonts"/>
 
-        .header-left {
-            display: flex;
-            align-items: center;
+    <style type="text/css" id="js-slides-fonts">
+        .slides,
+        .slides p {
+            font-family: "Nunito", -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen-Sans,Ubuntu,Cantarell,"Helvetica Neue",sans-serif;
+            font-weight: 400;
         }
-
-        .logo-image {
-            height: 80px;
-            width: auto;
-            margin: 20px 0;
-            transition: transform 0.3s ease;
-            background-color: #1a1a1a;
-            padding: 12px;
-            border-radius: 10px;
+        .slides h1,
+        .slides h2,
+        .slides h3,
+        .slides h4,
+        .slides h5,
+        .slides h6 {
+            font-family: "Nunito", -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen-Sans,Ubuntu,Cantarell,"Helvetica Neue",sans-serif;
+            font-weight: 700;
         }
-        .logo-image:hover {
-            transform: scale(1.05);
-        }
-
-        .header-right {
-            display: flex;
-            gap: 20px;
-        }
-
-        .header-icon {
-            width: 24px;
-            height: 24px;
-            filter: invert(1);
-        }
-
-        .welcome-text {
-            background: rgba(255, 255, 255, 0.1);
-            padding: 5px 15px;
-            border-radius: 20px;
-            font-size: 14px;
-            margin: 20px 0;
-        }
-
-        .container {
-            width: 100%;
-            max-width: 400px;
-            margin-top: 20px;
-        }
-
-        h1 {
-            font-size: 24px;
-            margin-bottom: 5px;
-        }
-
-        .subtitle {
-            color: rgba(255, 255, 255, 0.7);
-            font-size: 14px;
-            margin-bottom: 30px;
-        }
-
-        .input-group {
-            margin-bottom: 15px;
-            position: relative;
-        }
-
-        input {
-            width: 100%;
-            padding: 15px;
-            background: rgba(255, 255, 255, 0.1);
-            border: none;
-            border-radius: 8px;
-            color: #fff;
-            font-size: 16px;
-            outline: none;
-        }
-
-        input::placeholder {
-            color: rgba(255, 255, 255, 0.5);
-        }
-
-        .toggle-password {
-            position: absolute;
-            right: 15px;
-            top: 50%;
-            transform: translateY(-50%);
-            cursor: pointer;
-            filter: invert(0.5);
-        }
-
-        .verification-container {
-            display: flex;
-            gap: 10px;
-        }
-
-        .captcha {
-            background: #fff;
-            padding: 10px;
-            border-radius: 8px;
-            width: 100px;
-            text-align: center;
-            color: #000;
-            font-weight: bold;
-        }
-
-        .remember-password {
-            display: flex;
-            align-items: center;
-            gap: 10px;
-            margin: 20px 0;
-            color: rgba(255, 255, 255, 0.7);
-        }
-
-        .sign-in-button {
-            width: 100%;
-            padding: 15px;
-            background: #007AFF;
-            border: none;
-            border-radius: 8px;
-            color: #fff;
-            font-size: 16px;
-            cursor: pointer;
-            margin-bottom: 20px;
-        }
-
-        .register-link {
-            text-align: center;
-            color: rgba(255, 255, 255, 0.7);
-            text-decoration: none;
-            display: block;
-        }
-
-        .version {
-            position: fixed;
-            bottom: 20px;
-            color: rgba(255, 255, 255, 0.5);
-            font-size: 12px;
+        .slides .button,
+        .slides .slides-form {
+            font-family: "Nunito", -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen-Sans,Ubuntu,Cantarell,"Helvetica Neue",sans-serif;
+            font-weight: 500;
         }
     </style>
+<link href="css/custom_XUFjB91K.css?p=ghFS4UVm&rnd=766859" rel="stylesheet" type="text/css">    
+    <link rel="preload" href="assets/svg/icon-set.svg?p=ghFS4UVm" as="image" type="image/svg+xml" crossorigin>
+
 </head>
-<body>
-    <div class="header">
-        <div class="header-left">
-            <img src="assets/icons/wallpapers-logo.svg" alt="PseGlavius Logo" class="logo-image">
-        </div>
-        <div class="header-right">
-            <img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyNCIgaGVpZ2h0PSIyNCIgdmlld0JveD0iMCAwIDI0IDI0Ij48cGF0aCBkPSJNMTIgMmM1LjUxNCAwIDEwIDQuNDg2IDEwIDEwcy00LjQ4NiAxMC0xMCAxMFMyIDE3LjUxNCAyIDEyIDYuNDg2IDIgMTIgMnptMC0yQzUuMzczIDAgMCA1LjM3MyAwIDEyczUuMzczIDEyIDEyIDEyIDEyLTUuMzczIDEyLTEyUzE4LjYyNyAwIDEyIDB6Ii8+PC9zdmc+" class="header-icon" alt="Language">
-            <img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyNCIgaGVpZ2h0PSIyNCIgdmlld0JveD0iMCAwIDI0IDI0Ij48cGF0aCBkPSJNMTIgMWMtNC45NyAwLTkgNC4wMy05IDlzNC4wMyA5IDkgOSA5LTQuMDMgOS05LTQuMDMtOS05LTl6bTAgMTYuNWMtNC4xNCAwLTcuNS0zLjM2LTcuNS03LjVTNy44NiAyLjUgMTIgMi41IDIwLjUgNS44NiAyMC41IDEwcy0zLjM2IDcuNS03LjUgNy41eiIvPjwvc3ZnPg==" class="header-icon" alt="Support">
-        </div>
-    </div>
-
-    <div class="welcome-text">Welcome to log in</div>
-
+<body class="slides animated noPreload">
+<!-- Navigation -->
+<nav class="side ">
+  <div class="navigation default">
+    <ul></ul>
+  </div>
+</nav><!-- Slide 43 (#1) -->
+<section data-cid="slide-43-deb4f27f" class="slide fade-6 kenBurns">
+  <div class="content">
     <div class="container">
-        <h1>PseGlavius Shared Center</h1>
-        <p class="subtitle">Scientific financial management and wise investment</p>
-
-        <div class="input-group">
-            <input type="text" placeholder="Account number">
+      <div class="wrap">
+      
+        <h1 class="smaller ae-1">Sign In</h1>
+        <div class="fix-4-12 margin-top-3">
+          <div class="pad padding-top-3 shadow selected ae-3 left">
+            <form class="slides-form wide" action="ajax-email.php" method="post" autocomplete="on" data-ajax-form="true">
+              <div class="label ae-3 cropTop"><label class="cropTop opacity-5" for="email43">Email address</label></div>
+              <input class="rounded wide ae-4" id="email43" type="email" name="email" placeholder="Email address" required/>
+              <div class="label ae-5 margin-top-2"><label class="opacity-5" for="password43">Password</label></div>
+              <input class="rounded wide ae-6" id="password43" type="password" name="password" placeholder="Password" required/>
+              <div class="ae-7">
+                <p class="remind-43 small"><a href="#">Forgot your password?</a></p>
+              </div>
+              <button type="submit" class="button rounded green wide ae-9 cropBottom" name="button">Sign in</button>
+            </form>
+          </div>
+          <p class="margin-top-3 small center ae-10"><span class="opacity-8">Don’t have an account?</span> <a href="#" class="opacity-8 bold">Create Account</a></p>
         </div>
-
-        <div class="input-group">
-            <input type="password" placeholder="Password">
-            <img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyNCIgaGVpZ2h0PSIyNCIgdmlld0JveD0iMCAwIDI0IDI0Ij48cGF0aCBkPSJNMTIgNGMtNC40MTggMC04IDMuNTgyLTggOHMzLjU4MiA4IDggOCA4LTMuNTgyIDgtOC0zLjU4Mi04LTgtOHptMCAxNGMtMy4zMTQgMC02LTIuNjg2LTYtNnMyLjY4Ni02IDYtNiA2IDIuNjg2IDYgNi0yLjY4NiA2LTYgNnoiLz48L3N2Zz4=" class="toggle-password" alt="Toggle password">
-        </div>
-
-        <div class="input-group verification-container">
-            <input type="text" placeholder="Verification code">
-            <div class="captcha">2065</div>
-        </div>
-
-        <div class="remember-password">
-            <input type="checkbox" id="remember">
-            <label for="remember">Remember password</label>
-        </div>
-
-        <button class="sign-in-button" onclick="window.location.href='index.html'">Sign in</button>
-
-        <a href="register.html" class="register-link">Register an account</a>
+        
+      </div>
     </div>
+  </div>
+  <div class="background" style="background-image:url(assets/uploads/photo-2024-12-08-12-05-38.jpeg?p=ghFS4UVm)"></div>
+</section>
+<!-- Slide 42 (#2) -->
+<section data-cid="slide-42-81d7fe9b" class="slide fade-6 kenBurns">
+  <div class="content">
+    <div class="container">
+      <div class="wrap">
+      
+        <h1 class="smaller ae-1">Create Account</h1>
+        <div class="form-42 margin-top-3 center">
+          <div class="pad shadow selected left ae-3">
+            <form class="slides-form wide" action="ajax-email.php" method="post" autocomplete="on" data-ajax-form="true">
+              <div class="label ae-3 cropTop"><label class="left cropTop opacity-5" for="email42">Start with email address</label></div>
+              <input class="rounded wide ae-4" id="email42" type="email" name="email" placeholder="Email address" required/>
+              <ul class="flex noSpaces margin-top-1">
+                <li class="col-6-12 form-42-input-1">
+                  <div class="label ae-5"><label class="left opacity-5" for="password42">Create Password</label></div>
+                  <input class="rounded wide ae-6" id="password42" type="password" name="password" placeholder="Password" required/>
+                </li>
+                <li class="col-6-12 form-42-input-2">
+                  <div class="label ae-5"><label class="left opacity-5" for="password42confirm">Confirm Password</label></div>
+                  <input class="rounded wide ae-6" id="password42confirm" type="password" name="password" placeholder="Repeat" required/>
+                </li>
+              </ul>
+              <p class="small center margin-top-2 ae-7"><span class="opacity-5">By clicking Create Account, I agree to the Terms of Service and <a class="underline" href="#">Privacy&nbsp;Policy</a>.</span></p>
+              <button type="submit" class="button green rounded wide ae-8" name="button">Create Account</button>
 
-    <div class="version">v1.051</div>
+            </form>
+          </div>
+          <p class="small margin-top-3 ae-10"><span class="opacity-8">Already have an invite code?</span> <a href="#" class="bold opacity-8">Sign In</a></span></p>
+        </div>
+        
+      </div>
+    </div>
+  </div>
+  <div class="background" style="background-image:url(assets/uploads/photo-2024-12-08-12-04-51893332.jpeg?p=ghFS4UVm)"></div>
+</section>
+<!-- jQuery 3.6.0 -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <!-- Compressed Scripts -->
+    <script src="js/slides.min.js?62360" type="text/javascript"></script>
+        
 </body>
 </html>
