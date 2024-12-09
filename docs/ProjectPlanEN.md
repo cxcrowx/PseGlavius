@@ -18,49 +18,116 @@ Font sizes:
 **User Friendly:** Minimize unnecessary text, use brief, clear headings, tooltips on hover, and a clear visual hierarchy.
 
 **Project Structure**  
-A file structure with development priority and easy navigation: start with access forms (login, registration), then the main hub, then the profile and extended features.
+A streamlined file structure with 7 main pages for optimal user experience and navigation:
 
 ```
 project/
 │
-├─ index.html               // Welcome page
-├─ login.html               // Login
-├─ register.html            // Registration
-├─ recover-password.html    // Password Recovery
-│
-├─ main.html                // Main hub
-├─ user-dashboard.html      // User’s personal dashboard
-├─ marketplace.html         // Marketplace for upgrades
-├─ ranking-system.html      // Ranks
-├─ account-levels.html      // Account levels, leaderboard
-├─ payouts.html             // Payout structure
-├─ partner-program.html     // Partner program
-├─ additional-features.html // Additional features: insurance, geography, NFT
-├─ investor-example.html    // Investor example
-├─ income-sources.html      // Income sources
-├─ conclusion.html          // Conclusion
-│
-├─ about-us.html            // About the company
-├─ faq.html                 // FAQ
-├─ contact-support.html     // Support
-├─ roadmap.html             // Roadmap
-├─ profit-calculator.html   // Profitability calculator
-├─ international.html       // International expansion
-│
-├─ purchase-equipment.html  // New layout for purchasing drones and upgrades
-├─ transactions.html        // Transaction history, balance management
+├─ index.html          // Landing/Home page
+├─ login.html          // Combined authentication (login, register, password recovery)
+├─ investment.html     // Investment opportunities
+├─ dashboard.html      // User's personal dashboard
+├─ profile.html        // User profile and settings
+├─ about.html          // About company and mission
+├─ contact.html        // Contact form and support
 │
 ├─ css/
-│  ├─ style.css
-│  └─ responsive.css
+│  ├─ styles.css
+│  ├─ slides-customized.min.css
+│  └─ custom_XUFjB91K.css
 │
 ├─ js/
-│  ├─ main.js
-│  └─ slider.js
+│  ├─ slides.min.js
+│  └─ jquery.min.js
 │
-└─ images/
-   ├─ ... (icons, logos, charts)
+├─ assets/
+   ├─ img/
+   │  ├─ team/         // Team member photos
+   │  ├─ partners/     // Partner logos
+   │  └─ icons/        // UI icons
+   └─ uploads/         // User uploaded content
 ```
+
+**Detailed Description of Pages**
+
+**index.html**
+- Modern landing page showcasing investment opportunities
+- Hero section with compelling value proposition
+- Featured investment options
+- Quick action buttons for common tasks
+- Bottom navigation for easy access to other pages
+
+**login.html (Combined Authentication)**
+- Three integrated forms:
+  1. Login Form:
+     - Email and password fields
+     - "Forgot password?" link
+     - "Create Account" link
+  2. Registration Form:
+     - Full name, email, password fields
+     - Password confirmation
+     - Terms acceptance
+  3. Password Recovery Form:
+     - Email field for reset link
+     - Back to login option
+- Smooth transitions between forms
+- Consistent styling and user experience
+
+**investment.html**
+- Available investment opportunities
+- Investment cards with key details:
+  - Investment amount
+  - Return rates
+  - Duration
+  - Progress bars
+- Filtering and sorting options
+- Quick investment actions
+- Payout rates and structure:
+  - Level-based rates
+  - Rank influence
+  - Upgrade coefficients
+- Interactive profit calculator
+
+**dashboard.html**
+- User's investment overview
+- Quick statistics:
+  - Total investment
+  - Active projects
+  - Total returns
+  - Account level and rank
+- Active investments grid
+- Recent transactions table
+- Performance charts
+- Payout section:
+  - Current payout structure
+  - Dynamic profit calculator
+  - Withdrawal options
+  - Transaction history
+
+**profile.html**
+- Personal information management
+- Security settings:
+  - Password change
+  - Two-factor authentication
+- Notification preferences
+- Account settings
+- Profile picture upload
+
+**about.html**
+- Company mission and vision
+- Team member profiles
+- Why choose us section
+- Partner showcase
+- Technology overview
+- Achievement timeline
+
+**contact.html**
+- Contact form
+- Office location with map
+- Support contact details
+- Social media links
+- FAQ section
+- Office hours
 
 **Detailed Description of Slides and Elements**
 
@@ -156,101 +223,6 @@ project/
 - Top accounts table (name, level, number of invites).  
 - "Star" icon for top positions.
 
-**payouts.html (2 slides)**  
-**Slide 1: Payout Structure**  
-- Table with levels, rates, coefficients.  
-- Short text about the influence of ranks and upgrades.
-
-**Slide 2: Dynamic Calculator**  
-- Link to profit-calculator.html  
-- Example of final income changes with different parameters.
-
-**partner-program.html (2 slides)**  
-**Slide 1: Partners and Referrals**  
-- Referral level scheme (icons, arrows).  
-- Percentage table for each level.
-
-**Slide 2: Bonus Utilization**  
-- Description: "Use bonuses for upgrades or withdrawals."  
-- Buttons "Marketplace" and "Withdraw Funds."
-
-**additional-features.html (3 slides)**  
-**Slide 1: Maintenance and Insurance**  
-- Drone icons, plan prices.  
-- Short text on insurance benefits.
-
-**Slide 2: Geography**  
-- Map highlighting city center and suburbs.  
-- Text: "+50% to income in the center."
-
-**Slide 3: NFT**  
-- NFT icon, text about liquidity and resale.
-
-**investor-example.html (1 slide)**  
-**Slide 1: Investor Example**  
-- Short narrative: "At level 7 with upgrades you earn more than X USDT/year."  
-- A graphical comparison of income without and with upgrades.
-
-**income-sources.html (3 slides)**  
-**Slide 1: General Overview**  
-- Icons: rental, delivery, advertising.  
-- Brief explanations.
-
-**Slide 2: Rental and Commission**  
-- Text with income formula.  
-- Simple graph of income dependency on number of orders.
-
-**Slide 3: Advertising**  
-- Image of a drone with a screen.  
-- Text on higher rates in busy areas.
-
-**conclusion.html (1 slide)**  
-**Slide 1: Conclusion**  
-- Short summary of opportunities.  
-- "Start Investing" button.
-
-**about-us.html (1 slide)**  
-**Slide 1: About the Company**  
-- Team banner (about-team.png).  
-- Text about mission and values.  
-- "Contact" button -> contact-support.html
-
-**faq.html (1 slide)**  
-**Slide 1: FAQ**  
-- Accordion with questions and answers (faq-icon.png to the left of the heading).  
-- Concise answer texts.
-
-**contact-support.html (1 slide)**  
-**Slide 1: Support**  
-- Form: Name, Email, Message  
-- "Send" button  
-- Support contacts at the bottom (email, chat).
-
-**roadmap.html (1 slide)**  
-**Slide 1: Roadmap**  
-- A linear scale with future releases (roadmap-icon.png).  
-- Brief description of key stages.
-
-**profit-calculator.html (1-2 slides)**  
-**Slide 1: Profit Calculator**  
-- Input fields: number of drones, selected level, upgrades (checkboxes).  
-- "Calculate" button.  
-- Display the result in large font.  
-- (Optional Slide 2): Detailed calculation.
-
-**international.html (1 slide)**  
-**Slide 1: International Expansion**  
-- World map with highlighted regions (international-icon.png).  
-- Short text about expansion benefits.  
-- "Learn More" button.
-
-**Conclusion**  
-The presented architecture and detailed description of slides greatly simplify the development process. We started with basic authorization pages, then moved to the main hub and further into internal pages. Each page is structured simply and clearly, using icons, buttons, banners, and text with stylish and practical recommendations. This approach ensures user-friendliness and makes it easier for developers to implement functionality step-by-step, gradually expanding the project’s capabilities.
-
-Below is an additional layout for managing purchases, payments, and transactions. This layout focuses on the procedure for purchasing new equipment (drones) and upgrades, as well as choosing the payment network (TRC20, Polygon, etc.). It provides a convenient step-by-step interface that makes the transaction process as understandable as possible for the user.
-
-We also add a supplementary layout for viewing the transaction history and managing the balance. This allows the user to track their operations, top up the balance, withdraw funds, and view order status.
-
 **purchase-equipment.html (4-5 slides)**  
 **Main Idea**  
 The page is divided into logical steps of the purchase process. The user first chooses drones and upgrades, then selects the payment network, confirms the transaction, and makes the payment. All with a user-friendly interface.
@@ -332,14 +304,6 @@ Purpose: View transaction history, top up balance, withdraw funds.
 - Field to enter withdrawal amount, select network.  
 - "Submit Withdrawal Request" button.  
 - Short description of withdrawal fees.
-
-**Conclusion**  
-Added layout purchase-equipment.html for the full purchase cycle of drones and upgrades, including network choice (TRC20/Polygon) and step-by-step payment instructions.  
-Added layout transactions.html for balance management, viewing transaction history, and handling top-ups and withdrawals.  
-All in a unified style, with clear icons, concise headings, neat tables, and helpful tooltips. The transaction process is broken down into logical steps, improving user convenience and reducing errors.  
-The user interface is focused on simplicity: from product selection to payment confirmation. Each stage includes clear instructions and visual aids (icons, QR codes, copy address buttons). This approach extends the project’s capabilities and enhances the user experience (UX).
-
----
 
 **Classification-Categorization:**  
 - **Domain:** Web Design / UI/UX and Front-End Development  
