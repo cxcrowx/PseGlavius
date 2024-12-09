@@ -1,0 +1,221 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1.0">
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <base href="./">
+    <title>geography.html - D2T</title>
+    <meta property="og:title" content="geography.html - D2T" />
+    <meta name="twitter:title" content="geography.html - D2T" />
+    <link rel="icon" sizes="any" href="assets/svg/favicon-default.svg" type="image/svg+xml">
+
+    <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin>
+    <link href="css/slides-customized.min.css?p=r4esObv0&rnd=276585" rel="stylesheet" type="text/css" id="js-slides-css">
+
+    
+    <!-- Fonts and Material Icons -->
+    <link rel="stylesheet" as="font" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&family=Material+Icons&display=swap" id="js-google-fonts"/>
+
+    <style type="text/css" id="js-slides-fonts">
+        .slides,
+        .slides p {
+            font-family: "Inter", -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen-Sans,Ubuntu,Cantarell,"Helvetica Neue",sans-serif;
+            font-weight: 400;
+        }
+        .slides h1,
+        .slides h2,
+        .slides h3,
+        .slides h4,
+        .slides h5,
+        .slides h6 {
+            font-family: "Inter", -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen-Sans,Ubuntu,Cantarell,"Helvetica Neue",sans-serif;
+            font-weight: 700;
+        }
+        .slides .button,
+        .slides .slides-form {
+            font-family: "Inter", -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen-Sans,Ubuntu,Cantarell,"Helvetica Neue",sans-serif;
+            font-weight: 500;
+        }
+    </style>
+<link href='https://api.tiles.mapbox.com/mapbox-gl-js/v0.50.0/mapbox-gl.css' rel='stylesheet' />
+<link href="css/custom_khLX0rmU.css?p=r4esObv0&rnd=230153" rel="stylesheet" type="text/css">    
+    <link rel="preload" href="assets/svg/icon-set.svg?p=r4esObv0" as="image" type="image/svg+xml" crossorigin>
+
+</head>
+<body class="slides animated noPreload">
+<!-- Navigation -->
+<nav class="side ">
+  <div class="navigation default">
+    <ul></ul>
+  </div>
+</nav><!-- Выбор географической зоны (#1) -->
+<div data-cid="example-nm7GcAwf-c5192390">
+<section class="slide fade-6" data-name="mapbox" data-title="Mapbox">
+  <div class="content">
+    <div class="container">
+      <div class="wrap">
+
+        <a class="button black round small crop popupTrigger" data-popup-id="mapbox">Mapbox</a>
+        
+      </div>
+    </div>
+  </div>
+</section>
+<div class="popup" data-popup-id="mapbox">
+  <div class="close opaque"><svg><use href="assets/svg/icons.svg#close"></use></svg></div>
+  <div class="content">
+    <div class="container">
+      <div id='mapboxBackground' style='width: 100vw;height: 100vh;'></div>
+    </div>
+  </div>
+</div>
+
+<!-- Open Street Map (https://openstreetmap.org/) -->
+<section class="slide fade-6" data-name="openstreetmap" data-title="Open Street Map">
+  <div class="content">
+    <div class="container">
+      <div class="wrap">
+
+      
+        <div class="fix-4-12">
+          <div class="embedContainer popupTrigger shadow" data-popup-id="openstreetmap" style="padding-bottom:70%">
+                <iframe class="scale disableClick" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="https://www.openstreetmap.org/export/embed.html?bbox=-74.04853820800783%2C40.71707851579789%2C-73.89232635498048%2C40.8340736197749&amp;layer=mapnik&amp;zoom=15"></iframe>
+              </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+  <div class="background">
+    <iframe class="iframeBackground" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="https://www.openstreetmap.org/export/embed.html?bbox=-74.04853820800783%2C40.71707851579789%2C-73.89232635498048%2C40.8340736197749&amp;layer=mapnik&amp;zoom=15"></iframe>
+  </div>
+</section>
+
+<div class="popup" data-popup-id="openstreetmap">
+  <div class="close opaque"><svg><use href="assets/svg/icons.svg#close"></use></svg></div>
+  <div class="content">
+    <div class="container">
+      <iframe frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="https://www.openstreetmap.org/export/embed.html?bbox=-74.04853820800783%2C40.71707851579789%2C-73.89232635498048%2C40.8340736197749&amp;layer=mapnik&amp;zoom=15" style='width: 100vw;height: 100vh;'></iframe>
+    </div>
+  </div>
+</div>
+</div>
+<!-- Сравнение доходности зон (#2) -->
+<div data-cid="example-oxEyTGHL-c9707ff7">
+<!-- The custom "Infinite" Slider -->
+<section class="slide whiteSlide" data-name="accordion-infinite" data-title="Infinite Accordion">
+  <div class="content">
+    <div class="container">
+      <div class="wrap">
+
+        <div class="fix-5-12 relative">
+
+          <!-- slider -->
+          <!-- data-cards-to-show = how many cards are shown in slider -->
+          <!-- data-images = all the images that'll be rotated in slider, separate by comma -->
+          <div class="wide js-custom-infinite-slider" data-cards-to-show="3" data-images="
+https://designmodo.com/slides/app/generator/img/slide/slide-11.jpg,
+https://designmodo.com/slides/app/generator/img/slide/slide-10.jpg,
+https://designmodo.com/slides/app/generator/img/slide/slide-12.jpg,
+https://designmodo.com/slides/app/generator/img/slide/slide-13.jpg,
+https://designmodo.com/slides/app/generator/img/slide/slide-14.jpg,
+https://designmodo.com/slides/app/generator/img/slide/slide-15.jpg">
+              <div class="relative slides-holder ae-5 fromLeft"><!-- All the slides will be inside this div --></div>
+          </div>
+      	</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- The custom "Switch" Slider -->
+<section class="slide whiteSlide" data-name="accordion-switch" data-title="Switch two slides">
+  <div class="content">
+    <div class="container">
+      <div class="wrap">
+
+        <div class="fix-6-12">
+
+          <!-- slider -->
+          <div class="wide js-custom-switch-slider">
+              <div class="relative holder" data-show-next="on_back" data-z-index="0">
+                  <img class="absolute rounded big-shadow on_back visible" src="assets/img/example/fast_img_1.jpg" alt=""/>
+                  <img class="absolute rounded big-shadow on_front visible" src="assets/img/example/fast_img_2.jpg" alt=""/>
+                  <img class="absolute rounded big-shadow on_back invisible" src="assets/img/example/fast_img_1.jpg" alt=""/>
+                  <img class="absolute rounded big-shadow on_front invisible" src="assets/img/example/fast_img_2.jpg" alt=""/>
+              </div>
+          </div>
+      	</div>
+      </div>
+    </div>
+  </div>
+</section>
+</div>
+<!-- Поддержка и обслуживание (#3) -->
+<section data-cid="slide-50-d09f5c97" class="slide fade-6 kenBurns">
+  <div class="content">
+    <div class="container">
+      <div class="wrap">
+      
+        <div class="fix-10-12 left">
+          <h1 class="margin-bottom-3 ae-1">Form follows function – that has been misunderstood.</h1>
+          <p class="larger light ae-2"><span class="opacity-8">I think there are two types of people in this world – people who can start things and people who can finish things. And while I place great value on the finishers, it&rsquo;s the starters who are rare because they can envision what isn&rsquo;t&nbsp;there.</span></p>
+          <ul class="flex later margin-top-4">
+            <li class="col-4-12 left ae-3">
+              <h4 class="small margin-bottom-1 ae-4">Meet quick</h4>
+              <div class="ae-5"><p class="small opacity-8">Design is so critical it should be on the agenda of every meeting.</p></div>
+            </li>
+            <li class="col-4-12 left ae-4">
+              <h4 class="small margin-bottom-1 ae-5">Better interface</h4>
+              <div class="ae-6"><p class="small opacity-8">Space and light and order. Those are the things that men.</p></div>
+            </li>
+            <li class="col-4-12 left ae-5">
+              <h4 class="small margin-bottom-1 ae-6">Listen your mind</h4>
+              <div class="ae-7"><p class="small opacity-8">Design is not making beauty, beauty emerges from selection.</p></div>
+            </li>
+          </ul>
+        </div>
+        
+      </div>
+    </div>
+  </div>
+  <div class="background" style="background-image:url(assets/img/background/img-50.jpg)"></div>
+</section>
+<!-- Обучение и консультация (#4) -->
+<section data-cid="slide-107-ec66599f" class="slide autoHeight slide-107">
+  <div class="content">
+    <div class="container">
+      <div class="wrap padding-right-desktop-10 padding-top-tablet-6">
+        <div class="mobile-wrap align-left left">
+          <div class="fix-6-12"> 
+			      <p class="margin-bottom-2 h4 small bolder opacity-6 ae-1">MEET...</p>
+			      <h1 class="margin-bottom-5 largest ae-2">Sophie Young</h1>
+			      <p class="margin-bottom-5 h1 smallest bolder padding-right-5 padding-right-phablet-0 ae-3">When you look around you and there’s no one to call a friend. Cheer up! Look to heaven, there’s your greatest help. There’s all the help you&nbsp;need.</p>
+			      <div class="socials-107"> 
+			        <a class="button actionButton white big crop margin-right-1 margin-right-phone-0 ae-4"> 
+			          <svg><use href="assets/svg/icons.svg#snapchat"></use></svg> 
+			        </a>
+			        <a class="button actionButton white big crop margin-right-1 margin-right-phone-0 ae-5"> 
+			          <svg><use href="assets/svg/icons.svg#youtube"></use></svg>
+			        </a>
+			        <a class="button actionButton white big crop ae-6"> 
+			          <svg><use href="assets/svg/icons.svg#github"></use></svg>
+			        </a>              
+			      </div>
+          </div>
+        </div>
+      </div>
+      <div class="wrap left fromRight ae-1" style="background-image: url(assets/img/background/img-107.jpg);"></div>
+    </div>
+  </div>
+</section>
+
+<!-- jQuery 3.6.0 -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <!-- Compressed Scripts -->
+    <script src="js/slides.min.js?62360" type="text/javascript"></script>
+    <script src="https://api.mapbox.com/mapbox-gl-js/v2.10.0/mapbox-gl.js"></script>
+<script src="js/custom_khLX0rmU.js?p=r4esObv0&rnd=671997"></script>    
+</body>
+</html>

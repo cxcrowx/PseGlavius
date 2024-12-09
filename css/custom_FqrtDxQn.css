@@ -1,0 +1,48 @@
+@charset "UTF-8";
+/* Источники дохода (#2) */
+/* To restrict styles to the current slide, panel, or example use .slide[data-cid="slide-125-8cad3642"] */
+.slide[data-cid=slide-125-8cad3642] .controller-125-dots > li {
+  height: 10px;
+  width: 10px;
+  background: rgba(255, 255, 255, 0.6);
+  margin-right: 5px;
+  transition: 0.15s;
+}
+.slide[data-cid=slide-125-8cad3642] .controller-125-dots > li:after {
+  display: none;
+}
+.slide[data-cid=slide-125-8cad3642] .controller-125-dots > li.selected {
+  background: white;
+}
+.slide[data-cid=slide-125-8cad3642] .controller-125-dots > li:hover {
+  transform: scale(1.25);
+}
+.slide[data-cid=slide-125-8cad3642].whiteSlide .controller-125-dots > li {
+  background: #999999;
+}
+.slide[data-cid=slide-125-8cad3642].whiteSlide .controller-125-dots > li.selected {
+  background: #202020;
+}
+.slide[data-cid=slide-125-8cad3642] .slider-125-next-btn a:hover, .slide[data-cid=slide-125-8cad3642] .socials-125 a:hover {
+  opacity: 1 !important;
+}
+.slide[data-cid=slide-125-8cad3642] .controller-125-img > li.selected {
+  display: none;
+}
+.slide[data-cid=slide-125-8cad3642] .controller-125-img > li img {
+  transition: 0.15s;
+}
+.slide[data-cid=slide-125-8cad3642] .controller-125-img > li img:hover {
+  opacity: 1 !important;
+}
+
+/* Таблица доходов и вложений (#3) */
+/* To restrict styles to the current slide, panel, or example use .slide[data-cid="slide-174-bca6b7b0"] */
+.slide[data-cid=slide-174-bca6b7b0] .controller-slider-174 > li img {
+  margin: 0 2px;
+  border: 3px solid transparent;
+  transition: 0.15s;
+}
+.slide[data-cid=slide-174-bca6b7b0] .controller-slider-174 > li.selected img {
+  border-color: #2f80ed;
+}
