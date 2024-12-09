@@ -70,6 +70,97 @@
             font-family: "Inter", -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen-Sans,Ubuntu,Cantarell,"Helvetica Neue",sans-serif;
             font-weight: 500;
         }
+
+        /* Custom Investment Table Styles */
+        .investment-container {
+            background: transparent;
+            padding: 40px;
+            margin: 20px auto;
+            max-width: 1000px;
+        }
+
+        .investment-table {
+            width: 100%;
+            border-collapse: separate;
+            border-spacing: 0;
+            margin: 20px 0;
+            background: transparent;
+        }
+
+        .investment-table th {
+            background: rgba(85, 105, 255, 0.9);
+            color: white;
+            font-weight: 600;
+            padding: 20px;
+            text-align: center;
+            font-size: 18px;
+            border-top: 1px solid rgba(69, 89, 238, 0.8);
+        }
+
+        .investment-table th:first-child {
+            border-top-left-radius: 10px;
+        }
+
+        .investment-table th:last-child {
+            border-top-right-radius: 10px;
+        }
+
+        .investment-table td {
+            padding: 20px;
+            text-align: center;
+            font-size: 16px;
+            background: transparent;
+            color: white;
+            transition: all 0.3s ease;
+        }
+
+        .investment-table tr:last-child td:first-child {
+            border-bottom-left-radius: 10px;
+        }
+
+        .investment-table tr:last-child td:last-child {
+            border-bottom-right-radius: 10px;
+        }
+
+        .investment-table tr:hover td {
+            background: rgba(255, 255, 255, 0.1);
+        }
+
+        .investment-table .price {
+            font-weight: 600;
+            color: white;
+        }
+
+        .investment-table .highlight {
+            color: #7B8AFF;
+        }
+
+        .profit-factors {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 30px;
+            margin-top: 40px;
+            text-align: center;
+        }
+
+        .profit-factor {
+            padding: 20px;
+            background: transparent;
+            border-radius: 10px;
+            transition: transform 0.3s ease;
+            color: white;
+        }
+
+        .profit-factor:hover {
+            transform: translateY(-5px);
+            background: rgba(255, 255, 255, 0.1);
+        }
+
+        .profit-factor i {
+            font-size: 36px;
+            color: #7B8AFF;
+            margin-bottom: 15px;
+        }
     </style>
 <link href="css/custom_FqrtDxQn.css?p=r4esObv0&rnd=253476" rel="stylesheet" type="text/css">
     <link rel="preload" href="assets/svg/icon-set.svg?p=r4esObv0" as="image" type="image/svg+xml" crossorigin>
@@ -78,58 +169,39 @@
 <body class="slides animated simplifiedMobile noPreload">
 <!-- Panel Top 14 -->
 <div data-cid="panel-top-14-632bd285">
-<nav class="panel top forceMobileView ">
+<nav class="panel top forceMobileView">
   <div class="sections desktop">
-    <div class="left"></div>
-    <div class="center"><a href="#" title="Slides Framework"><svg style="width:82px;height:24px"><use href="assets/svg/icons.svg#logo"></use></svg></a></div>
-    <div class="right"><a class="button blue rounded small" href="#">Войти</a><a class="button green rounded small" href="#">Зарегистрироваться</a></div>
+    <div class="left"><a href="#" title="Pseglavius"><img src="assets/img/logo.png" alt="Logo"/></a></div>
+    <div class="right">
+      <a href="login.html" class="button blue rounded small">Войти</a>
+      <a href="register.html" class="button green rounded small">Зарегистрироваться</a>
+    </div>
   </div>
   <div class="sections compact hidden">
-    <div class="left"><a href="#" title="Slides Framework"><svg style="width:82px;height:24px"><use href="assets/svg/icons.svg#logo"></use></svg></a></div>
-    <div class="right"><span class="button actionButton sidebarTrigger" data-sidebar-id="1"><svg><use href="assets/svg/icons.svg#menu"></use></svg></span></div>
-  </div>
-</nav>
-
-<!-- Sidebar -->
-<nav class="sidebar" data-sidebar-id="1">
-  <div class="close"><svg><use href="assets/svg/icons.svg#close"></use></svg></div>
-  <div class="content">
-    <a href="#" class="logo"><svg width="100" height="30"><use href="assets/svg/icons.svg#logo"></use></svg></a>
-    <ul class="mainMenu margin-top-3">
-      <li><a href="#">All Goods</a></li>
-      <li><a href="#">UI Kits</a></li>
-      <li><a href="#">Icons</a></li>
-      <li><a href="#">Mockups</a></li>
-      <li><a href="#">Toolkit</a></li>
-    </ul>
-    <ul class="subMenu small opacity-8">
-      <li><a href="#">Submit Product</a></li>
-      <li><a href="#">FAQ</a></li>
-      <li><a href="#">License</a></li>
-      <li><a href="#">Terms & Conditions</a></li>
-      <li><a href="#">Privacy Policy</a></li>
-      <li><a href="#">Contact Us</a></li>
-    </ul>
-    <ul class="social opacity-8">
-      <li><a href="#"><svg><use href="assets/svg/icons.svg#facebook"></use></svg></a></li>
-      <li><a href="#"><svg><use href="assets/svg/icons.svg#twitter"></use></svg></a></li>
-      <li><a href="#"><svg><use href="assets/svg/icons.svg#instagram"></use></svg></a></li>
-    </ul>
+    <div class="left"><a href="#" title="Pseglavius"><img src="assets/img/logo.png" alt="Logo"/></a></div>
+    <div class="right">
+      <a href="login.html" class="button blue rounded small">Войти</a>
+      <a href="register.html" class="button green rounded small">Зарегистрироваться</a>
+    </div>
   </div>
 </nav>
 </div>
-<!-- Приветствие и брендирование (#1) -->
-<div data-cid="example-3bdJnyfs-68927983">
-<!-- Default approach -->
+
+<!-- Slide 1: Welcome and Branding -->
 <section class="slide fade-6 video">
   <div class="content">
     <div class="container">
       <div class="wrap">
-
         <div class="fix-12-12">
-          <h1 class="small">Background video</h1>
+          <div class="relative">
+            <div class="text-center">
+              <img src="assets/img/logo.png" alt="Pseglavius Drones Ltd Logo" class="ae-1 fromCenter margin-bottom-3"/>
+              <h1 class="ae-2 fromBottom">Pseglavius Drones Ltd</h1>
+              <p class="larger margin-top-2 ae-3 fromBottom">Инновационный подход к автономной доставке</p>
+              <a href="#slide-2" class="button blue margin-top-2 ae-4 fromBottom">Узнать больше</a>
+            </div>
+          </div>
         </div>
-
       </div>
     </div>
   </div>
@@ -142,145 +214,111 @@
 </section>
 
 <!-- Advanced approach: GIF Background on mobile -->
-<section class="slide fade video">
+<section class="slide fade video" id="slide-2">
   <div class="content">
     <div class="container">
       <div class="wrap">
-
-        <div class="fix-10-12">
-          <h1>This background video will be animated on mobile devices as well because of a gif image that will be shown instead of a static poster.</h1>
-          <p class="margin-top-3">That approach will reduce a loading time for desktop devices.</p>
+        <div class="fix-12-12">
+          <div class="grid grid-75 margin-bottom-4 text-center">
+            <div class="col-4-12 ae-1">
+              <i class="material-icons large">flight</i>
+              <h3>Аренда дронов</h3>
+              <p>Стабильный источник дохода</p>
+            </div>
+            <div class="col-4-12 ae-2">
+              <i class="material-icons large">local_shipping</i>
+              <h3>Комиссия за доставку</h3>
+              <p>Растущая с увеличением объёма заказов</p>
+            </div>
+            <div class="col-4-12 ae-3">
+              <i class="material-icons large">campaign</i>
+              <h3>Доход от рекламы на дронах</h3>
+              <p>Дополнительная прибыль от трансляции контента</p>
+            </div>
+          </div>
+          <div class="text-center ae-4">
+            <p class="larger margin-bottom-2">Комбинация этих трех источников дохода позволяет достичь годового дохода в сотни тысяч долларов</p>
+            <a href="#slide-3" class="button blue">Подробнее о доходности</a>
+          </div>
         </div>
-
       </div>
     </div>
   </div>
   <div class="background" style="background-image:url('assets/img/example/movie-cut.gif');">
     <video poster="assets/uploads/untitled-2.png?p=r4esObv0" autoplay loop muted webkit-playsinline>
-
       <source src="assets/uploads/untitled-2.webm?p=r4esObv0" type="video/webm"/>
-
     </video>
   </div>
 </section>
 
-</div>
-<!-- Источники дохода (#2) -->
-<section data-cid="slide-125-8cad3642" class="slide fade-6">
-  <div class="content">
-    <div class="container">
-      <div class="wrap align-left">
-        <div class="fix-12-12">
-          <ul class="flex bottom">
-            <li class="col-6-12 col-tablet-1-2 col-phablet-1-1 margin-bottom-phablet-4">
-              <p class="margin-bottom-1 smaller uppercase bold opacity-6 ae-1">COLLECTION</p>
-              <h4 class="margin-bottom-3 small ae-2">Architectural Inspiration</h4>
-              <ul class="slider slider-125 fromBottom ae-3" data-slider-id="slider-125">
-                <li class="selected">
-                  <img src="assets/img/gallery-125-1.jpg" alt="Picture" class="rounded" />
-                </li>
-                <li>
-                  <img src="assets/img/gallery-125-2.jpg" alt="Picture" class="rounded" />
-                </li>
-                <li>
-                  <img src="assets/img/gallery-125-3.jpg" alt="Picture" class="rounded" />
-                </li>
-                <li>
-                  <img src="assets/img/gallery-125-4.jpg" alt="Picture" class="rounded" />
-                </li>
-              </ul>
-            </li>
-            <li class="col-6-12 col-tablet-1-2 col-phablet-1-1 padding-left-desktop-1">
-              <div class="margin-bottom-3">
-                <img src="assets/img/gallery-125-5.jpg" alt="Picture" class="round middle ae-2" />
-                <div class="inlineBlock middle margin-left-2">
-                  <p class="crop small bold ae-3">Victoria Jackson</p>
-                  <p class="crop small opacity-8 ae-4">4326 photos&nbsp;total</p>
-                </div>
-              </div>
-              <h1 class="margin-bottom-2 small ae-5">My Vision Of The Future&nbsp;Buildings</h1>
-              <div class="fix-5-12 toLeft">
-                <p class="margin-bottom-3 large opacity-8 ae-6">The sure way to success is still hard work, smart work and dedication. It’s the proven way. It’s the way&nbsp;to&nbsp;go.</p>
-              </div>
-              <ul class="margin-bottom-3 flex verticalCenter">
-                <li class="col-phone-1-1 ae-7">
-                  <ul class="controller controller-125-dots inlineBlock" data-slider-id="slider-125">
-                    <li class="padding-0 dot round selected"></li>
-                    <li class="padding-0 dot round"></li>
-                    <li class="padding-0 dot round"></li>
-                    <li class="padding-0 dot round"></li>
-                  </ul>
-                  <p class="crop margin-left-2 smallest inlineBlock middle slider-125-next-btn">
-                    <a class="uppercase bold opacity-6" data-slider-id="slider-125" data-slider-action="next">NEXT</a>
-                  </p>
-                </li>
-                <li class="margin-top-phone-3 col-phone-1-1 toRight socials-125 ae-7">
-                  <a href="#" class="margin-right-1 opacity-6">
-                    <svg width="20" height="20" fill="#ffffff"><use href="assets/svg/icons.svg#twitter"></use></svg>
-                  </a>
-                  <a href="#" class="margin-right-1 opacity-6">
-                    <svg width="20" height="20" fill="#ffffff"><use href="assets/svg/icons.svg#facebook2"></use></svg>
-                  </a>
-                  <a href="#" class="opacity-6">
-                    <svg width="20" height="20" fill="#ffffff"><use href="assets/svg/icons.svg#linkedin"></use></svg>
-                  </a>
-                </li>
-              </ul>
-              <ul class="flex fixedSpaces controller controller-125-img" data-slider-id="slider-125">
-                <li class="col-4-12 col-phone-1-3 selected">
-                  <img src="assets/img/gallery-125-1.jpg" alt="Picture" class="rounded opacity-5" />
-                </li>
-                <li class="col-4-12 col-phone-1-3 ae-7">
-                  <img src="assets/img/gallery-125-2.jpg" alt="Picture" class="rounded opacity-5" />
-                </li>
-                <li class="col-4-12 col-phone-1-3 ae-8">
-                  <img src="assets/img/gallery-125-3.jpg" alt="Picture" class="rounded opacity-5" />
-                </li>
-                <li class="col-4-12 col-phone-1-3 ae-9">
-                  <img src="assets/img/gallery-125-4.jpg" alt="Picture" class="rounded opacity-5" />
-                </li>
-              </ul>
-            </li>
-          </ul>
-        </div>
-      </div>
-    </div>
-  </div>
-  <div class="background" style="background-image:url(assets/uploads/untitled-2.png?p=r4esObv0)"></div>
-</section>
-
-<!-- Таблица доходов и вложений (#3) -->
-<section data-cid="slide-174-bca6b7b0" class="slide fade-6">
+<!-- Slide 3: Income and Investment Table -->
+<section class="slide fade-6" id="slide-3">
   <div class="content">
     <div class="container">
       <div class="wrap">
         <div class="fix-12-12">
-          <ul class="margin-bottom-3 flex verticalCenter">
-            <li class="margin-bottom-phablet-2 col-10-12 col-tablet-3-5 col-phablet-1-1 align-left fromLeft ae-1">
-              <h2 class="margin-bottom-1 smallest">Do It With Passion, Or Not At All</h2>
-              <img src="assets/svg/pin.svg" width="14" height="14" class="margin-right-1 inlineBlock">
-              <p class="crop inlineBlock">Stockholm, Sweden</p>
-            </li>
-            <li class="col-2-12 col-tablet-2-5 col-phablet-1-1 align-right phablet-align-left fromRight ae-2">
-              <a href="#" class="crop button blue">Contact Seller</a>
-            </li>
-          </ul>
-          <ul class="margin-bottom-3 slider clickable ae-3" data-slider-id="slider-174">
-            <li class="selected"><img src="assets/img/gallery-174-1.jpg" class="block rounded wide"/></li>
-            <li><img src="assets/img/gallery-174-2.jpg" class="block rounded wide"/></li>
-            <li><img src="assets/img/gallery-174-3.jpg" class="block rounded wide"/></li>
-            <li><img src="assets/img/gallery-174-4.jpg" class="block rounded wide"/></li>
-            <li><img src="assets/img/gallery-174-5.jpg" class="block rounded wide"/></li>
-            <li><img src="assets/img/gallery-174-6.jpg" class="block rounded wide"/></li>
-          </ul>
-          <ul class="controller controller-slider-174 noText ae-4" data-slider-id="slider-174">
-            <li class="inlineBlock selected"><img src="assets/img/gallery-174-1-thumbnail.jpg" alt="" class="rounded" /></li>
-            <li class="inlineBlock"><img src="assets/img/gallery-174-2-thumbnail.jpg" alt="" class="rounded" /></li>
-            <li class="inlineBlock"><img src="assets/img/gallery-174-3-thumbnail.jpg" alt="" class="rounded" /></li>
-            <li class="inlineBlock"><img src="assets/img/gallery-174-4-thumbnail.jpg" alt="" class="rounded" /></li>
-            <li class="inlineBlock"><img src="assets/img/gallery-174-5-thumbnail.jpg" alt="" class="rounded" /></li>
-            <li class="inlineBlock"><img src="assets/img/gallery-174-6-thumbnail.jpg" alt="" class="rounded" /></li>
-          </ul>
+          <div class="investment-container ae-1">
+            <h2 class="margin-bottom-2 center">Инвестиции и доходность</h2>
+            
+            <table class="investment-table ae-2">
+              <thead>
+                <tr>
+                  <th>Инвестиции (USD)</th>
+                  <th>Ежедневный доход</th>
+                  <th>Месячный доход</th>
+                  <th>Годовой доход</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr class="ae-3">
+                  <td class="price">$500</td>
+                  <td class="price highlight">$50</td>
+                  <td class="price">$1,500</td>
+                  <td class="price">$18,000</td>
+                </tr>
+                <tr class="ae-4">
+                  <td class="price">$2,000</td>
+                  <td class="price highlight">$200</td>
+                  <td class="price">$6,000</td>
+                  <td class="price">$72,000</td>
+                </tr>
+                <tr class="ae-5">
+                  <td class="price">$10,000</td>
+                  <td class="price highlight">$1,000</td>
+                  <td class="price">$30,000</td>
+                  <td class="price">$360,000</td>
+                </tr>
+                <tr class="ae-6">
+                  <td class="price">$32,000</td>
+                  <td class="price highlight">$3,200</td>
+                  <td class="price">$96,000</td>
+                  <td class="price">$1,152,000</td>
+                </tr>
+              </tbody>
+            </table>
+
+            <div class="profit-factors">
+              <div class="profit-factor ae-7">
+                <i class="material-icons">trending_up</i>
+                <h4>Ранговая система</h4>
+                <p>Повышайте свой ранг для увеличения дохода</p>
+              </div>
+              <div class="profit-factor ae-8">
+                <i class="material-icons">upgrade</i>
+                <h4>Улучшения</h4>
+                <p>Модернизируйте дроны для большей эффективности</p>
+              </div>
+              <div class="profit-factor ae-9">
+                <i class="material-icons">location_on</i>
+                <h4>Премиальные зоны</h4>
+                <p>Работайте в зонах с повышенным доходом</p>
+              </div>
+            </div>
+
+            <div class="center margin-top-3">
+              <a href="ranks_and_team.html" class="button blue ae-10">Перейти к рангам</a>
+            </div>
+          </div>
         </div>
       </div>
     </div>
