@@ -1,0 +1,74 @@
+/* 
+Compile this file to css/custom_FqrtDxQn.css using any SCSS preprocessor. 
+More information here: https://slides.gitbook.io/manual/scss
+*/
+
+@import "mixins.scss"; 
+@import "variables.scss";
+@import "variables-custom.scss";
+
+/* Источники дохода (#2) */
+/* To restrict styles to the current slide, panel, or example use .slide[data-cid="slide-125-8cad3642"] */
+.slide[data-cid="slide-125-8cad3642"]{
+  .controller-125-dots{
+    > li{
+      height: 10px;
+      width: 10px;
+      background: rgba($default-white-color, 0.6);
+      margin-right:5px;
+      transition: .15s;
+      &:after{
+        display: none;
+      }
+      &.selected{
+        background: rgba($default-white-color, 1);
+      }
+      &:hover{
+        transform:scale(1.25);
+      }
+    }
+  }
+  &.whiteSlide{
+    .controller-125-dots{
+      > li{
+        background: $gray;
+        &.selected{
+          background: $default-text-color;
+        }
+      }
+    } 
+  }
+  .slider-125-next-btn, .socials-125{
+    a:hover{
+      opacity:1 !important;
+    }
+  }
+  .controller-125-img{
+    > li{
+      &.selected{
+        display: none;
+      }
+      img{
+        transition: .15s;
+        &:hover{
+          opacity:1 !important;
+        }
+      }
+    }
+  }
+}
+
+/* Таблица доходов и вложений (#3) */
+/* To restrict styles to the current slide, panel, or example use .slide[data-cid="slide-174-bca6b7b0"] */
+.slide[data-cid="slide-174-bca6b7b0"]{
+  .controller-slider-174 > li{
+    img{
+      margin:0 2px;
+      border:3px solid transparent;
+      transition: .15s;
+    } 
+    &.selected img{
+      border-color:$blue;
+    }
+  }
+}

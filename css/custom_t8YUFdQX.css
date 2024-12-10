@@ -1,0 +1,47 @@
+@charset "UTF-8";
+/* Вход в ЛК (#1) */
+/* To restrict styles to the current slide, panel, or example use .slide[data-cid="slide-43-0c92a58c"] */
+.slide[data-cid=slide-43-0c92a58c] p.remind-43 {
+  max-width: 350px;
+  line-height: 1.29;
+  margin: 13px auto;
+  text-align: center;
+}
+
+/* Регистрация (#2) */
+/* To restrict styles to the current slide, panel, or example use .slide[data-cid="slide-42-9247a64a"] */
+.slide[data-cid=slide-42-9247a64a] .form-42 {
+  max-width: 500px;
+  margin: 0 auto;
+}
+@media (min-width: 1024px) {
+  .slide[data-cid=slide-42-9247a64a] .form-42 .form-42-input-1 input {
+    border-top-right-radius: 0 !important;
+    border-bottom-right-radius: 0 !important;
+  }
+  .slide[data-cid=slide-42-9247a64a] .form-42 .form-42-input-2 input {
+    border-top-left-radius: 0 !important;
+    border-bottom-left-radius: 0 !important;
+    position: relative;
+    left: -1px;
+  }
+}
+
+/* Восстановление (#3) */
+/* To restrict styles to the current slide, panel, or example use .slide[data-cid="slide-42-9c5c5eef"] */
+.slide[data-cid=slide-42-9c5c5eef] .form-42 {
+  max-width: 500px;
+  margin: 0 auto;
+}
+@media (min-width: 1024px) {
+  .slide[data-cid=slide-42-9c5c5eef] .form-42 .form-42-input-1 input {
+    border-top-right-radius: 0 !important;
+    border-bottom-right-radius: 0 !important;
+  }
+  .slide[data-cid=slide-42-9c5c5eef] .form-42 .form-42-input-2 input {
+    border-top-left-radius: 0 !important;
+    border-bottom-left-radius: 0 !important;
+    position: relative;
+    left: -1px;
+  }
+}

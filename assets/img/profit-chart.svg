@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="800" height="400" viewBox="0 0 800 400" xmlns="http://www.w3.org/2000/svg">
+    <!-- Background -->
+    <rect x="0" y="0" width="800" height="400" fill="#ffffff"/>
+    
+    <!-- Grid lines -->
+    <g stroke="#e0e0e0" stroke-width="1">
+        <line x1="100" y1="50" x2="100" y2="350"/>
+        <line x1="100" y1="350" x2="700" y2="350"/>
+        <line x1="100" y1="50" x2="700" y2="50"/>
+        <line x1="100" y1="150" x2="700" y2="150"/>
+        <line x1="100" y1="250" x2="700" y2="250"/>
+    </g>
+
+    <!-- Y-axis labels -->
+    <g font-family="Arial" font-size="12" fill="#666666">
+        <text x="60" y="355" text-anchor="end">$0</text>
+        <text x="60" y="255" text-anchor="end">$100</text>
+        <text x="60" y="155" text-anchor="end">$200</text>
+        <text x="60" y="55" text-anchor="end">$300</text>
+    </g>
+
+    <!-- Bars -->
+    <!-- Suburbs -->
+    <g transform="translate(200,0)">
+        <rect x="-40" y="200" width="80" height="150" fill="#4A90E2" opacity="0.8"/>
+        <text x="0" y="370" font-family="Arial" font-size="14" text-anchor="middle" fill="#333333">Suburbs</text>
+        <text x="0" y="190" font-family="Arial" font-size="12" text-anchor="middle" fill="#666666">$150/day</text>
+    </g>
+
+    <!-- Center -->
+    <g transform="translate(400,0)">
+        <rect x="-40" y="100" width="80" height="250" fill="#50E3C2" opacity="0.8"/>
+        <text x="0" y="370" font-family="Arial" font-size="14" text-anchor="middle" fill="#333333">Center</text>
+        <text x="0" y="90" font-family="Arial" font-size="12" text-anchor="middle" fill="#666666">$250/day</text>
+    </g>
+
+    <!-- Exclusive Routes -->
+    <g transform="translate(600,0)">
+        <rect x="-40" y="50" width="80" height="300" fill="#F5A623" opacity="0.8"/>
+        <text x="0" y="370" font-family="Arial" font-size="14" text-anchor="middle" fill="#333333">Exclusive</text>
+        <text x="0" y="40" font-family="Arial" font-size="12" text-anchor="middle" fill="#666666">$300/day</text>
+    </g>
+
+    <!-- Title -->
+    <text x="400" y="30" font-family="Arial" font-size="20" font-weight="bold" text-anchor="middle" fill="#333333">Average Daily Earnings by Zone</text>
+</svg>

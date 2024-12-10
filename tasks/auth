@@ -1,0 +1,10 @@
+Content of auth.html (Registration, Login, Password Recovery)
+
+**Slide 1: Registration**
+Form: fields for entering email, password, password confirmation. The "Register" button. Below the form – a link "Already have an account? Log in." Friendly, understandable design. After successful registration – a success message and an invitation to log in.
+
+**Slide 2: Login to Personal Account**
+Form: email, password. The "Login" button. The "Forgot Password?" link opens the recovery slide. After successful login – redirect to account.html.
+
+**Slide 3: Password Recovery**
+Form to enter email. The "Send Recovery Link" button. After clicking – notification: "A password reset link has been sent to your email." Additional link to return to the login or registration page.
