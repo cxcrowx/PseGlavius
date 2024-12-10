@@ -1936,3 +1936,74 @@ EXAMPLES HOW TO WRITE MY HTML CODE:
     margin-top: 20px;
     margin-bottom: 40px;
   }
+
+
+<div data-cid="example-MTo5Gkfm-a0075248">
+<!-- Get the layout -->
+<section class="slide whiteSlide">
+  <div class="content">
+    <div class="container">
+      <div class="wrap">
+
+        <div class="fix-12-12">
+
+          <!-- your carousel -->
+          <div class="owl-carousel owl-theme ae-3">
+            <div class="item">1</div>
+            <div class="item">2</div>
+            <div class="item">3</div>
+            <div class="item">4</div>
+            <div class="item">5</div>
+            <div class="item">6</div>
+            <div class="item">7</div>
+            <div class="item">8</div>
+            <div class="item">9</div>
+            <div class="item">10</div>
+            <div class="item">11</div>
+            <div class="item">12</div>
+          </div>
+
+        </div>
+
+      </div>
+    </div>
+  </div>
+</section>
+</div>
+<link href="https://cdn.rawgit.com/OwlCarousel2/OwlCarousel2/develop/dist/assets/owl.carousel.min.css" rel="stylesheet" type="text/css">
+<link href="https://cdn.rawgit.com/OwlCarousel2/OwlCarousel2/develop/dist/assets/owl.theme.default.min.css" rel="stylesheet" type="text/css">
+
+/* for example only */
+.owl-carousel .item {
+  height: 0;
+  text-align: left;
+  padding: 10px;
+  background: #FF9800;
+  padding-bottom: 56%;
+}
+<script src="https://cdn.rawgit.com/OwlCarousel2/OwlCarousel2/develop/dist/owl.carousel.min.js"></script>
+
+<script>
+  $(document).ready(function() {
+  	// More settings are here: https://owlcarousel2.github.io/OwlCarousel2/
+    $('.owl-carousel').owlCarousel({
+      loop: true,
+      margin: 10,
+      responsiveClass: true,
+      nav: false,
+      responsive: {
+        0: {
+          items: 1
+        },
+        600: {
+          items: 3
+        },
+        1000: {
+          items: 4,
+          loop: false,
+          margin: 20
+        }
+      }
+    })
+  })
+</script>
