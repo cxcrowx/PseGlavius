@@ -1,0 +1,84 @@
+Content: """Slide 1: Basic Account Settings**
+Form: 1. Personal Information
+Description: Displays the user’s personal details and allows for updates.
+Content:
+Fields:
+Full Name
+Date of Birth
+Contact Number
+Email Address
+Function: Users can view and edit their personal details, ensuring accuracy for account recovery or communication purposes.
+2. Password Management
+Description: A section to update or reset the account password.
+Content:
+Options:
+Current Password
+New Password
+Confirm New Password
+Function: Provides security by allowing users to change their password. Includes validation for strong passwords.
+
+4. Two-Factor Authentication (2FA)
+Description: Adds an extra layer of security for account access.
+Content:
+Options:
+Enable/Disable 2FA
+Link mobile number or authentication app
+Function: Secures the account by requiring an additional authentication step.
+5. Connected Devices
+Description: Displays devices currently logged into the account.
+Content:
+Table/List:
+Device Name
+Last Login Location
+Login Time
+Option to "Log Out"
+Function: Monitors and manages active sessions for better security.
+
+7. Payment Methods
+Description: Manage your saved crypto wallet addresses.
+
+Content:
+List:
+
+Saved Crypto Wallet Addresses
+Actions:
+
+Add New Wallet Address
+Select Replenishment Network
+Enter Wallet Address Below
+Remove/Update Wallet Details
+Function:
+Enables users to add or update crypto wallet addresses for seamless transactions.
+
+9. Account Activity
+Description: Provides a log of recent activities.
+Content:
+Table:
+Date and Time
+Activity Description
+Location (IP Address)
+Function: Tracks account changes or logins to identify unauthorized access.
+
+11. Language and Region Settings
+Description: Configures the interface language and regional preferences.
+Content:
+Dropdowns:
+Language Selection
+Time Zone
+Function: Customizes the user interface and system timestamps.
+12. Support and Feedback
+Description: Provides resources for support or submitting feedback.
+Content:
+Links/Buttons:
+Contact Support
+Submit Feedback
+FAQs
+Function: Connects the user to support channels and gathers feedback for improvement.
+13. Account Customization
+Description: Personalizes the user experience.
+Content:
+Options:
+Profile Picture Upload
+Custom Themes (Light/Dark Mode)
+Username Display Preferences
+Function: Enhances user personalization and branding."""
