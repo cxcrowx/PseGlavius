@@ -1,0 +1,449 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Account Levels & Referral Rewards</title>
+<style>
+body {
+  margin: 0;
+  font-family: sans-serif;
+  background-color: #020817;
+  color: #fff;
+}
+
+.page-container {
+  position: relative;
+  min-height: 100vh;
+  padding: 2rem;
+}
+
+.content-wrapper {
+  position: relative;
+  z-index: 10;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.header-section {
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+.large-icon {
+  width: 4rem;
+  height: 4rem;
+  margin: 0 auto 1rem auto;
+  background: #1e40af;
+  border-radius: 50%;
+}
+
+.page-title {
+  font-size: 2.5rem;
+  font-weight: bold;
+  background: linear-gradient(to right, #60a5fa, #a78bfa);
+  color: transparent;
+  -webkit-background-clip: text;
+  background-clip: text;
+  margin-bottom: 1rem;
+}
+
+.page-subtitle {
+  color: #9ca3af;
+  font-size: 1.125rem;
+}
+
+/* Carousel Structure */
+.levels-carousel {
+  position: relative;
+  max-width: 902px; /* 782px + 60px padding on each side */
+  margin: 0 auto 3rem;
+  padding: 0 60px;
+}
+
+.levels-container {
+  width: 782px; /* Exactly 3 cards: (3 * 250px) + (2 * 16px gaps) */
+  margin: 0 auto;
+  overflow: hidden;
+}
+
+.cards-slider {
+  display: flex;
+  gap: 16px;
+  transition: transform 0.3s ease;
+  width: max-content; /* Allow container to fit all cards */
+}
+
+/* Card Styles */
+.level-card {
+  flex: 0 0 250px;
+  width: 250px;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 12px;
+  padding: 1.5rem;
+  box-sizing: border-box;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.level-content {
+  position: relative;
+  z-index: 1;
+}
+
+.level-header {
+  margin-bottom: 1rem;
+}
+
+.level-name {
+  font-size: 1.25rem;
+  font-weight: bold;
+  margin: 0 0 0.25rem;
+}
+
+.referral-count {
+  font-size: 0.875rem;
+  color: rgba(255,255,255,0.9);
+  margin: 0;
+}
+
+.privileges-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.privilege {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.875rem;
+  margin-bottom: 0.5rem;
+}
+
+.privilege::before {
+  content: '';
+  display: inline-block;
+  width: 0.375rem;
+  height: 0.375rem;
+  border-radius: 50%;
+  background: currentColor;
+}
+
+.privilege.available {
+  color: #fff;
+}
+
+.privilege.unavailable {
+  color: #888;
+  text-decoration: line-through;
+}
+
+/* Navigation Buttons */
+.nav-button {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 40px;
+  height: 40px;
+  background: rgba(255, 255, 255, 0.2);
+  border: 2px solid rgba(255, 255, 255, 0.4);
+  color: #fff;
+  font-size: 24px;
+  cursor: pointer;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 20;
+  transition: all 0.3s ease;
+  padding: 0;
+}
+
+.nav-button:hover {
+  background: rgba(255, 255, 255, 0.3);
+  border-color: rgba(255, 255, 255, 0.6);
+}
+
+.nav-button.left {
+  left: 0;
+}
+
+.nav-button.right {
+  right: 0;
+}
+
+.nav-button:disabled {
+  opacity: 0.3;
+  cursor: not-allowed;
+}
+
+/* Investment Progress */
+.investment-progress {
+  max-width: 600px;
+  margin: 0 auto;
+  background: rgba(0,0,0,0.5);
+  border: 1px solid #333;
+  border-radius: 0.5rem;
+  padding: 1.5rem;
+}
+
+.header-row,
+.footer-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+
+.header-row h3 {
+  font-size: 1.125rem;
+  font-weight: 600;
+  margin: 0;
+}
+
+.progress-bar-background {
+  position: relative;
+  background: #1f2937;
+  height: 0.5rem;
+  border-radius: 0.25rem;
+  margin-bottom: 1rem;
+  overflow: hidden;
+}
+
+.progress-bar-fill {
+  background: linear-gradient(to right, #3b82f6, #8b5cf6);
+  height: 100%;
+}
+
+.gradient-button {
+  background: linear-gradient(to right, #3b82f6, #8b5cf6);
+  border: none;
+  padding: 0.5rem 1rem;
+  color: #fff;
+  cursor: pointer;
+  font-size: 0.875rem;
+  border-radius: 0.25rem;
+}
+
+.gradient-button:hover {
+  background: linear-gradient(to right, #2563eb, #7c3aed);
+}
+
+.logo {
+  display: block;
+  max-width: 200px;
+  height: auto;
+  margin: 0 auto 2rem;
+}
+.header-logo {
+  width: 4rem;
+  height: 4rem;
+  margin: 0 auto 1rem auto;
+}
+</style>
+</head>
+<body>
+
+<div class="page-container">
+  <div class="content-wrapper">
+    <img src="assets/svg/logo.svg" alt="Logo" class="logo" />
+    <div class="header-section">
+      
+      <h1 class="page-title">Account Levels & Referral Rewards</h1>
+      <p class="page-subtitle">Climb the ranks by growing your network</p>
+    </div>
+
+    <!-- Level Cards Section -->
+    <div class="levels-carousel">
+      <button class="nav-button left" aria-label="Previous">&lt;</button>
+      <div class="levels-container">
+        <div class="cards-slider">
+          <!-- Iron Level Card -->
+          <div class="level-card">
+            <div class="level-content">
+              <div class="level-header">
+                <h3 class="level-name">Iron</h3>
+                <p class="referral-count">0-2 Referrals</p>
+              </div>
+              <ul class="privileges-list">
+                <li class="privilege available">Basic Features</li>
+                <li class="privilege unavailable">Enhanced Analytics</li>
+                <li class="privilege unavailable">Priority Support</li>
+                <li class="privilege unavailable">Elite Benefits</li>
+              </ul>
+            </div>
+          </div>
+
+          <!-- Bronze Level Card -->
+          <div class="level-card">
+            <div class="level-content">
+              <div class="level-header">
+                <h3 class="level-name">Bronze</h3>
+                <p class="referral-count">3-5 Referrals</p>
+              </div>
+              <ul class="privileges-list">
+                <li class="privilege available">Basic Features</li>
+                <li class="privilege available">Enhanced Analytics</li>
+                <li class="privilege unavailable">Priority Support</li>
+                <li class="privilege unavailable">Elite Benefits</li>
+              </ul>
+            </div>
+          </div>
+
+          <!-- Silver Level Card -->
+          <div class="level-card">
+            <div class="level-content">
+              <div class="level-header">
+                <h3 class="level-name">Silver</h3>
+                <p class="referral-count">6-10 Referrals</p>
+              </div>
+              <ul class="privileges-list">
+                <li class="privilege available">Basic Features</li>
+                <li class="privilege available">Enhanced Analytics</li>
+                <li class="privilege available">Priority Support</li>
+                <li class="privilege unavailable">Elite Benefits</li>
+              </ul>
+            </div>
+          </div>
+
+          <!-- Gold Level Card -->
+          <div class="level-card">
+            <div class="level-content">
+              <div class="level-header">
+                <h3 class="level-name">Gold</h3>
+                <p class="referral-count">11-20 Referrals</p>
+              </div>
+              <ul class="privileges-list">
+                <li class="privilege available">Basic Features</li>
+                <li class="privilege available">Enhanced Analytics</li>
+                <li class="privilege available">Priority Support</li>
+                <li class="privilege available">Elite Benefits</li>
+              </ul>
+            </div>
+          </div>
+
+          <!-- Platinum Level Card -->
+          <div class="level-card">
+            <div class="level-content">
+              <div class="level-header">
+                <h3 class="level-name">Platinum</h3>
+                <p class="referral-count">21-35 Referrals</p>
+              </div>
+              <ul class="privileges-list">
+                <li class="privilege available">All Gold Benefits</li>
+                <li class="privilege available">Exclusive Events</li>
+                <li class="privilege available">Custom Support</li>
+                <li class="privilege available">Premium Rewards</li>
+              </ul>
+            </div>
+          </div>
+
+          <!-- Emerald Level Card -->
+          <div class="level-card">
+            <div class="level-content">
+              <div class="level-header">
+                <h3 class="level-name">Emerald</h3>
+                <p class="referral-count">36-50 Referrals</p>
+              </div>
+              <ul class="privileges-list">
+                <li class="privilege available">All Platinum Benefits</li>
+                <li class="privilege available">VIP Status</li>
+                <li class="privilege available">Special Recognition</li>
+                <li class="privilege available">Bonus Rewards</li>
+              </ul>
+            </div>
+          </div>
+
+          <!-- Ruby Level Card -->
+          <div class="level-card">
+            <div class="level-content">
+              <div class="level-header">
+                <h3 class="level-name">Ruby</h3>
+                <p class="referral-count">51-75 Referrals</p>
+              </div>
+              <ul class="privileges-list">
+                <li class="privilege available">All Emerald Benefits</li>
+                <li class="privilege available">Elite Networking</li>
+                <li class="privilege available">Exclusive Partnerships</li>
+                <li class="privilege available">Premium Perks</li>
+              </ul>
+            </div>
+          </div>
+
+          <!-- Diamond Level Card -->
+          <div class="level-card">
+            <div class="level-content">
+              <div class="level-header">
+                <h3 class="level-name">Diamond</h3>
+                <p class="referral-count">76+ Referrals</p>
+              </div>
+              <ul class="privileges-list">
+                <li class="privilege available">All Ruby Benefits</li>
+                <li class="privilege available">Legendary Status</li>
+                <li class="privilege available">Ultimate Rewards</li>
+                <li class="privilege available">Executive Access</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+      <button class="nav-button right" aria-label="Next">&gt;</button>
+    </div>
+
+    <!-- Investment Progress -->
+    <div class="investment-progress">
+      <div class="header-row">
+        <h3>Referral Progress</h3>
+        <span>5 Referrals / 10 Referrals</span>
+      </div>
+      <div class="progress-bar-background">
+        <div class="progress-bar-fill" style="width:50%;"></div>
+      </div>
+      <div class="footer-row">
+        <p>5 Referrals until Silver</p>
+        <button class="gradient-button">Invite Friends</button>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+<script>
+  const slider = document.querySelector('.cards-slider');
+  const leftButton = document.querySelector('.nav-button.left');
+  const rightButton = document.querySelector('.nav-button.right');
+
+  const cardWidth = 250;
+  const gap = 16;
+  const totalCards = slider.querySelectorAll('.level-card').length;
+  const maxIndex = totalCards - 3;
+
+  let currentIndex = 0;
+
+  function updateCarousel() {
+    const offset = -(currentIndex * (cardWidth + gap));
+    slider.style.transform = `translateX(${offset}px)`;
+    leftButton.disabled = currentIndex === 0;
+    rightButton.disabled = currentIndex === maxIndex;
+  }
+
+  leftButton.addEventListener('click', () => {
+    if (currentIndex > 0) {
+      currentIndex--;
+      updateCarousel();
+    }
+  });
+
+  rightButton.addEventListener('click', () => {
+    if (currentIndex < maxIndex) {
+      currentIndex++;
+      updateCarousel();
+    }
+  });
+
+  // Initial state
+  updateCarousel();
+</script>
+
+</body>
+</html>
