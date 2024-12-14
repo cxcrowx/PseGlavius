@@ -8,3 +8,455 @@ Form: email, password. The "Login" button. The "Forgot Password?" link opens the
 
 **Slide 3: Password Recovery**
 Form to enter email. The "Send Recovery Link" button. After clicking – notification: "A password reset link has been sent to your email." Additional link to return to the login or registration page.
+
+
+
+
+
+
+Код для LVL
+<section data-cid="slide-36-6005aee8" data-cid="slide-01-16a36961" data-cid="slide-160-44446953" data-cid="leaderboard-160-44446953" class="slide fade-6">
+   <body>
+
+<div class="page-container">
+  <div class="content-wrapper">
+    <img src="assets/uploads/logo.svg?p=waWY2e4A" alt="Logo" class="logo" />
+    <div class="header-section">
+
+      <h1 class="page-title">Account Levels & Referral Rewards</h1>
+      <p class="page-subtitle">Climb the ranks by growing your network</p>
+    </div>
+
+    <!-- Level Cards Section -->
+    <div class="levels-carousel">
+      <button class="nav-button left" aria-label="Previous">&lt;</button>
+      <div class="levels-container">
+        <div class="cards-slider">
+          <!-- Iron Level Card -->
+          <div class="level-card">
+  <div class="background-overlay" style="background: url('assets/uploads/lvl1.png?p=waWY2e4A') center center/cover no-repeat;"></div>
+  <div class="level-content">
+    <div class="level-header">
+      <h3 class="level-name">Iron</h3>
+      <p class="referral-count">0-2 Referrals</p>
+    </div>
+    <ul class="privileges-list">
+      <li class="privilege available">Basic Features</li>
+      <li class="privilege unavailable">Enhanced Analytics</li>
+      <li class="privilege unavailable">Priority Support</li>
+      <li class="privilege unavailable">Elite Benefits</li>
+    </ul>
+  </div>
+</div>
+
+          <!-- Bronze Level Card -->
+          <div class="level-card">
+  <div class="background-overlay" style="background: url('assets/uploads/lvl2.png?p=waWY2e4A') center center/cover no-repeat;"></div>
+            <div class="level-content">
+              <div class="level-header">
+                <h3 class="level-name">Bronze</h3>
+                <p class="referral-count">3-5 Referrals</p>
+              </div>
+              <ul class="privileges-list">
+                <li class="privilege available">Basic Features</li>
+                <li class="privilege available">Enhanced Analytics</li>
+                <li class="privilege unavailable">Priority Support</li>
+                <li class="privilege unavailable">Elite Benefits</li>
+
+              </ul>
+            </div>
+          </div>
+
+          <!-- Silver Level Card -->
+          <div class="level-card">
+  <div class="background-overlay" style="background: url('assets/uploads/lvl3.png?p=waWY2e4A') center center/cover no-repeat;"></div>
+            <div class="level-content">
+              <div class="level-header">
+                <h3 class="level-name">Silver</h3>
+                <p class="referral-count">6-10 Referrals</p>
+              </div>
+              <ul class="privileges-list">
+                <li class="privilege available">Basic Features</li>
+                <li class="privilege available">Enhanced Analytics</li>
+                <li class="privilege available">Priority Support</li>
+                <li class="privilege unavailable">Elite Benefits</li>
+              </ul>
+            </div>
+          </div>
+
+          <!-- Gold Level Card -->
+          <div class="level-card">
+  <div class="background-overlay" style="background:url('assets/uploads/lvl4.png?p=waWY2e4A') center center/cover no-repeat;"></div>
+            <div class="level-content">
+              <div class="level-header">
+                <h3 class="level-name">Gold</h3>
+                <p class="referral-count">11-20 Referrals</p>
+              </div>
+              <ul class="privileges-list">
+                <li class="privilege available">Basic Features</li>
+                <li class="privilege available">Enhanced Analytics</li>
+                <li class="privilege available">Priority Support</li>
+                <li class="privilege available">Elite Benefits</li>
+              </ul>
+            </div>
+          </div>
+
+          <!-- Platinum Level Card -->
+          <div class="level-card">
+  <div class="background-overlay" style="background:url('assets/uploads/lvl5.png?p=waWY2e4A') center center/cover no-repeat;"></div>
+            <div class="level-content">
+              <div class="level-header">
+                <h3 class="level-name">Platinum</h3>
+                <p class="referral-count">21-35 Referrals</p>
+              </div>
+              <ul class="privileges-list">
+                <li class="privilege available">All Gold Benefits</li>
+                <li class="privilege available">Exclusive Events</li>
+                <li class="privilege available">Custom Support</li>
+                <li class="privilege available">Premium Rewards</li>
+              </ul>
+            </div>
+          </div>
+
+          <!-- Emerald Level Card -->
+          <div class="level-card">
+  <div class="background-overlay" style="background:url('assets/uploads/lvl6.png?p=waWY2e4A') center center/cover no-repeat;"></div>
+            <div class="level-content">
+              <div class="level-header">
+                <h3 class="level-name">Emerald</h3>
+                <p class="referral-count">36-50 Referrals</p>
+              </div>
+              <ul class="privileges-list">
+                <li class="privilege available">All Platinum Benefits</li>
+                <li class="privilege available">VIP Status</li>
+                <li class="privilege available">Special Recognition</li>
+                <li class="privilege available">Bonus Rewards</li>
+              </ul>
+            </div>
+          </div>
+
+          <!-- Ruby Level Card -->
+          <div class="level-card">
+  <div class="background-overlay" style="background:url('assets/uploads/lvl7.png?p=waWY2e4A') center center/cover no-repeat;"></div>
+            <div class="level-content">
+              <div class="level-header">
+                <h3 class="level-name">Ruby</h3>
+                <p class="referral-count">51-75 Referrals</p>
+              </div>
+              <ul class="privileges-list">
+                <li class="privilege available">All Emerald Benefits</li>
+                <li class="privilege available">Elite Networking</li>
+                <li class="privilege available">Exclusive Partnerships</li>
+                <li class="privilege available">Premium Perks</li>
+              </ul>
+            </div>
+          </div>
+
+          <!-- Diamond Level Card -->
+          <div class="level-card">
+  <div class="background-overlay"style="background:url('assets/uploads/lvl8.png?p=waWY2e4A') center center/cover no-repeat;">
+    <div class="level-content"></div>
+              <div class="level-header">
+                <h3 class="level-name">Diamond</h3>
+                <p class="referral-count">76+ Referrals</p>
+              </div>
+              <ul class="privileges-list">
+                <li class="privilege available">All Ruby Benefits</li>
+                <li class="privilege available">Legendary Status</li>
+                <li class="privilege available">Ultimate Rewards</li>
+                <li class="privilege available">Executive Access</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+      <button class="nav-button right" aria-label="Next">&gt;</button>
+    </div>
+
+    <!-- Investment Progress -->
+    <div class="investment-progress">
+      <div class="header-row">
+        <h3>Referral Progress</h3>
+        <span>5 Referrals / 10 Referrals</span>
+      </div>
+      <div class="progress-bar-background">
+        <div class="progress-bar-fill" style="width:50%;"></div>
+      </div>
+      <div class="footer-row">
+        <p>5 Referrals until Silver</p>
+        <button class="gradient-button">Invite Friends</button>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+
+
+</body>
+<div class="background" style="background-image:url(assets/uploads/6939772.jpg?p=waWY2e4A)"></div>
+
+  </section>
+
+Код для ranks
+<section data-cid="slide-01-365430b6" data-cid="rank-content-01" class="slide whiteSlide">
+	<div class="content">
+	  <body>
+	<div class="min-h-screen py-20 px-6 relative overflow-hidden font-light bg-custom-radial">
+	  <!-- Background Effects -->
+	  <div class="absolute inset-0"></div>
+
+	  <!-- Light Beams -->
+	  <div class="absolute inset-0">
+		<div class="absolute top-0 left-1-4 w-1px h-full" style="background: linear-gradient(to bottom, rgba(79,195,247,0.5), transparent) rotate(-45deg); transform: rotate(-45deg);"></div>
+		<div class="absolute top-0 right-1-4 w-1px h-full" style="background: linear-gradient(to bottom, rgba(79,195,247,0.5), transparent); transform: rotate(45deg);"></div>
+	  </div>
+
+	  <div class="max-w-7xl mx-auto relative">
+		<!-- Header -->
+		<div class="text-center mb-20">
+		  <h1 class="text-6xl font-light mb-4 tracking-wide">
+			<span class="gradient-text">
+			  Account Levels & Referral Rewards
+			</span>
+		  </h1>
+		  <p class="text-gray-400 text-xl tracking-wider">
+			Climb the ranks by accumulating flight hours
+		  </p>
+		</div>
+
+		<!-- Ranks -->
+		<div class="grid gap-8">
+		  <!-- Top Row -->
+		  <div class="grid grid-cols-1 sm-grid-cols-2 lg-grid-cols-4 gap-8">
+			<!-- Novice (unlocked) -->
+			<div class="card unlocked">
+	<!-- Medallion -->
+	<div class="relative mb-6">
+	  <span class="text-2xl font-light tracking-wider gradient-text">Novice</span>
+	  <div class="medallion-container">
+		<div class="medallion-inner">
+		  <!-- Background overlay element -->
+		  <div class="medallion-background-overlay" style="background: url('assets/uploads/rank1.png?p=waWY2e4A') center center/cover no-repeat;"></div>
+
+		</div>
+	  </div>
+	  <div class="decorative-ring-1"></div>
+	  <div class="decorative-ring-2"></div>
+	</div>
+	<div class="text-center">
+	  <p class="mb-3 text-lg tracking-wider" style="color:#4fc3f7;">
+		1% commission reduction
+	  </p>
+	</div>
+  </div>
+			<!-- Amateur (locked) -->
+			<div class="card locked">
+			  <div class="absolute top-3 right-3 flex items-center gap-1-5" style="color: rgba(79,195,247,0.75);">
+				<span class="lock-icon"></span>
+				<span class="text-sm font-light tracking-wider">Locked</span>
+			  </div>
+			  <div class="relative mb-6">
+				<div class="medallion-container">
+				  <div class="medallion-inner">
+					<span class="text-2xl font-light tracking-wider gradient-text">Amateur</span>
+					</div>
+				</div>
+				<div class="decorative-ring-1"></div>
+				<div class="decorative-ring-2"></div>
+			  </div>
+			  <div class="text-center">
+				<p class="mb-3 text-lg tracking-wider text-gray-400">
+				  2% commission reduction
+				</p>
+				<p class="text-sm text-gray-500 tracking-wider">
+				  Reach 100 flight hours to unlock
+				</p>
+			  </div>
+			</div>
+
+			<!-- Advanced (locked) -->
+			<div class="card locked">
+			  <div class="absolute top-3 right-3 flex items-center gap-1-5" style="color: rgba(79,195,247,0.75);">
+				<span class="lock-icon"></span>
+				<span class="text-sm font-light tracking-wider">Locked</span>
+			  </div>
+			  <div class="relative mb-6">
+				<div class="medallion-container">
+				  <div class="medallion-inner">
+					 <span class="text-2xl font-light tracking-wider gradient-text">Advanced</span>
+				  </div>
+				</div>
+				<div class="decorative-ring-1"></div>
+				<div class="decorative-ring-2"></div>
+			  </div>
+			  <div class="text-center">
+				<p class="mb-3 text-lg tracking-wider text-gray-400">
+				  3% commission reduction
+				</p>
+				<p class="text-sm text-gray-500 tracking-wider">
+				  Reach 300 flight hours to unlock
+				</p>
+			  </div>
+			</div>
+
+			<!-- Expert (locked) -->
+			<div class="card locked">
+			  <div class="absolute top-3 right-3 flex items-center gap-1-5" style="color: rgba(79,195,247,0.75);">
+				<span class="lock-icon"></span>
+				<span class="text-sm font-light tracking-wider">Locked</span>
+			  </div>
+			  <div class="relative mb-6">
+				<div class="medallion-container">
+				  <div class="medallion-inner">
+					<span class="text-2xl font-light tracking-wider gradient-text">Expert</span>
+				  </div>
+				</div>
+				<div class="decorative-ring-1"></div>
+				<div class="decorative-ring-2"></div>
+			  </div>
+			  <div class="text-center">
+				<p class="mb-3 text-lg tracking-wider text-gray-400">
+				  4% commission reduction
+				</p>
+				<p class="text-sm text-gray-500 tracking-wider">
+				  Reach 600 flight hours to unlock
+				</p>
+			  </div>
+			</div>
+		  </div>
+
+		  <!-- Middle Row -->
+		  <div class="grid grid-cols-1 sm-grid-cols-3 gap-8">
+			<!-- Professional (locked) -->
+			<div class="card locked">
+			  <div class="absolute top-3 right-3 flex items-center gap-1-5" style="color: rgba(79,195,247,0.75);">
+				<span class="lock-icon"></span>
+				<span class="text-sm font-light tracking-wider">Locked</span>
+			  </div>
+			  <div class="relative mb-6">
+				<div class="medallion-container">
+				  <div class="medallion-inner">
+					<span class="text-2xl font-light tracking-wider gradient-text">Professional</span>
+				  </div>
+				</div>
+				<div class="decorative-ring-1"></div>
+				<div class="decorative-ring-2"></div>
+			  </div>
+			  <div class="text-center">
+				<p class="mb-3 text-lg tracking-wider text-gray-400">
+				  5% commission reduction
+				</p>
+				<p class="text-sm text-gray-500 tracking-wider">
+				  Reach 1000 flight hours to unlock
+				</p>
+			  </div>
+			</div>
+
+			<!-- Master (locked) -->
+			<div class="card locked">
+			  <div class="absolute top-3 right-3 flex items-center gap-1-5" style="color: rgba(79,195,247,0.75);">
+				<span class="lock-icon"></span>
+				<span class="text-sm font-light tracking-wider">Locked</span>
+			  </div>
+			  <div class="relative mb-6">
+				<div class="medallion-container">
+				  <div class="medallion-inner">
+					<span class="text-2xl font-light tracking-wider gradient-text">Master</span>
+				  </div>
+				</div>
+				<div class="decorative-ring-1"></div>
+				<div class="decorative-ring-2"></div>
+			  </div>
+			  <div class="text-center">
+				<p class="mb-3 text-lg tracking-wider text-gray-400">
+				  6% commission reduction
+				</p>
+				<p class="text-sm text-gray-500 tracking-wider">
+				  Reach 1500 flight hours to unlock
+				</p>
+			  </div>
+			</div>
+
+			<!-- Grandmaster (locked) -->
+			<div class="card locked">
+			  <div class="absolute top-3 right-3 flex items-center gap-1-5" style="color: rgba(79,195,247,0.75);">
+				<span class="lock-icon"></span>
+				<span class="text-sm font-light tracking-wider">Locked</span>
+			  </div>
+			  <div class="relative mb-6">
+				<div class="medallion-container">
+				  <div class="medallion-inner">
+					<span class="text-2xl font-light tracking-wider gradient-text">Grandmaster</span>
+				  </div>
+				</div>
+				<div class="decorative-ring-1"></div>
+				<div class="decorative-ring-2"></div>
+			  </div>
+			  <div class="text-center">
+				<p class="mb-3 text-lg tracking-wider text-gray-400">
+				  7% commission reduction
+				</p>
+				<p class="text-sm text-gray-500 tracking-wider">
+				  Reach 2000 flight hours to unlock
+				</p>
+			  </div>
+			</div>
+		  </div>
+
+		  <!-- Bottom Row -->
+		  <div class="max-w-md mx-auto w-full">
+			<!-- Ace (locked) -->
+			<div class="card locked">
+			  <div class="absolute top-3 right-3 flex items-center gap-1-5" style="color: rgba(79,195,247,0.75);">
+				<span class="lock-icon"></span>
+				<span class="text-sm font-light tracking-wider">Locked</span>
+			  </div>
+			  <div class="relative mb-6">
+				<div class="medallion-container">
+				  <div class="medallion-inner">
+					<span class="text-2xl font-light tracking-wider gradient-text">Ace</span>
+				  </div>
+				</div>
+				<div class="decorative-ring-1"></div>
+				<div class="decorative-ring-2"></div>
+			  </div>
+			  <div class="text-center">
+				<p class="mb-3 text-lg tracking-wider text-gray-400">
+				  8% commission reduction
+				</p>
+				<p class="text-sm text-gray-500 tracking-wider">
+				  Reach 3000 flight hours to unlock
+				</p>
+			  </div>
+			</div>
+		  </div>
+		</div>
+
+		<!-- Progress Tracker -->
+		<div class="mt-20 max-w-4xl mx-auto">
+		  <div class="flex justify-between items-center mb-4">
+			<h3 class="text-xl tracking-wider" style="color:#4fc3f7;">Your Progress</h3>
+			<span style="color:#4fc3f7;">75 / 300 flight hours</span>
+		  </div>
+		  <div class="progress-container">
+			<div class="progress-fill"></div>
+		  </div>
+		  <div class="flex justify-between mt-2 text-sm text-gray-400">
+			<!-- All ranks listed -->
+			<span class="hidden-lg-inline-block tracking-wider">Novice</span>
+			<span class="hidden-lg-inline-block tracking-wider">Amateur</span>
+			<span class="hidden-lg-inline-block tracking-wider">Advanced</span>
+			<span class="hidden-lg-inline-block tracking-wider">Expert</span>
+			<span class="hidden-lg-inline-block tracking-wider">Professional</span>
+			<span class="hidden-lg-inline-block tracking-wider">Master</span>
+			<span class="hidden-lg-inline-block tracking-wider">Grandmaster</span>
+			<span class="hidden-lg-inline-block tracking-wider">Ace</span>
+		  </div>
+		</div>
+	  </div>
+	</div>
+  </body>
+	</div>
+	  <div class="background" style="background-image:url(assets/uploads/6939772.jpg?p=waWY2e4A)"></div>
+  </section>

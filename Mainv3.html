@@ -1,0 +1,807 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Pseglavius Drones Ltd - Drone Dashboard</title>
+  <style>
+    /* ---------- Global Styles ---------- */
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+    body {
+      min-height: 100vh;
+      background: #000; /* black background */
+      color: #fff;
+      font-family: Arial, sans-serif;
+      overflow-x: hidden;
+      overflow-y: auto;
+    }
+
+    a {
+      text-decoration: none;
+      color: inherit;
+      transition: color 0.3s ease;
+    }
+
+    button {
+      cursor: pointer;
+    }
+
+    .container {
+      width: 90%;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+
+    /* ---------- Drone-Flying Theme Animations ---------- */
+    body::before {
+      content: "";
+      position: fixed;
+      top: -200px;
+      left: -200px;
+      width: 200vw;
+      height: 200vh;
+      background: radial-gradient(transparent, rgba(0, 255, 128, 0.1)), url('https://cdn.pixabay.com/photo/2017/03/12/13/41/drones-2135542_1280.png') 0 0 / 600px 600px no-repeat;
+      opacity: 0.05;
+      animation: drone-bg 60s linear infinite;
+      z-index: -1;
+    }
+    @keyframes drone-bg {
+      0% { transform: translate(0, 0); }
+      50% { transform: translate(-10%, -10%); }
+      100% { transform: translate(0, 0); }
+    }
+
+    /* ---------- Header ---------- */
+    header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 16px 0;
+    }
+    header .logo-area {
+      display: flex;
+      align-items: center;
+    }
+    header .logo-area img {
+      width: 40px;
+      height: 40px;
+      object-fit: cover;
+    }
+    header .logo-area span {
+      margin-left: 8px;
+      font-size: 1.25rem;
+      font-weight: bold;
+    }
+    nav {
+      display: none;
+    }
+    nav a {
+      margin-right: 16px;
+      font-size: 0.95rem;
+      color: #ccc;
+    }
+    nav a:hover {
+      color: #4ade80; /* green-500 */
+    }
+    button.profile-btn {
+      background: #4ade80;
+      color: #fff;
+      padding: 8px 16px;
+      border: none;
+      border-radius: 4px;
+      transition: background 0.3s ease;
+      margin-left: 8px;
+    }
+    button.profile-btn:hover {
+      background: #38b167;
+    }
+
+    /* Show nav on larger screens */
+    @media (min-width: 768px) {
+      nav {
+        display: block;
+      }
+    }
+
+    /* ---------- Main Layout ---------- */
+    main {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 16px;
+      margin-top: 32px;
+    }
+    @media (min-width: 768px) {
+      main {
+        grid-template-columns: 1fr 1fr;
+      }
+    }
+    @media (min-width: 1024px) {
+      main {
+        grid-template-columns: 1fr 1fr 1fr;
+      }
+    }
+
+    /* ---------- Card Styles ---------- */
+    .card {
+      background: #1f1f1f;
+      padding: 16px;
+      border-radius: 8px;
+      position: relative;
+      overflow: hidden;
+      transition: transform 0.5s ease, opacity 0.5s ease;
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    .card.card-visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+    .card h2 {
+      font-size: 1.5rem;
+      margin-bottom: 16px;
+      font-weight: bold;
+    }
+    .card p {
+      margin-bottom: 8px;
+    }
+
+    /* ---------- Progress Bar ---------- */
+    .progress-bar-container {
+      width: 100%;
+      background: #2f2f2f;
+      height: 8px;
+      border-radius: 4px;
+      overflow: hidden;
+      margin: 8px 0;
+    }
+    .progress-bar {
+      background: #4ade80; /* green */
+      height: 100%;
+      width: 0%;
+      transition: width 0.5s ease;
+    }
+
+    /* ---------- Slides Section ---------- */
+    .slide-container {
+      background: #1f1f1f;
+      padding: 16px;
+      border-radius: 8px;
+      position: relative;
+      overflow: hidden;
+      min-height: 260px;
+    }
+    .slide-container .slide-title {
+      text-transform: uppercase;
+      font-weight: bold;
+      color: #4ade80;
+      margin-bottom: 4px;
+      font-size: 0.85rem;
+    }
+    .slide-container h2 {
+      font-size: 1.5rem;
+      margin-bottom: 16px;
+    }
+    .slide-container p {
+      margin-bottom: 16px;
+    }
+    .slide-container .slide-button {
+      background: #4ade80;
+      color: #fff;
+      padding: 8px 16px;
+      border: none;
+      border-radius: 4px;
+      transition: transform 0.15s ease;
+    }
+    .slide-container .slide-button:hover {
+      transform: scale(1.05);
+    }
+    .slide-container .slide-button:active {
+      transform: scale(0.95);
+    }
+    /* Slide nav buttons */
+    .slide-container .nav-btn {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      background: transparent;
+      border: none;
+      color: #fff;
+      font-size: 24px;
+      cursor: pointer;
+    }
+    .slide-container .left-btn {
+      left: 8px;
+    }
+    .slide-container .right-btn {
+      right: 8px;
+    }
+    /* Slide indicators */
+    .slide-indicators {
+      position: absolute;
+      bottom: 16px;
+      left: 50%;
+      transform: translateX(-50%);
+      display: flex;
+      gap: 8px;
+    }
+    .slide-indicator-dot {
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+      background: #555;
+      transition: transform 0.3s ease, background 0.3s ease;
+    }
+    .slide-indicator-dot.active {
+      background: #4ade80;
+      transform: scale(1.2);
+    }
+
+    /* ---------- Image Carousel ---------- */
+    .image-carousel {
+      position: relative;
+      background: #1f1f1f;
+      padding: 16px;
+      border-radius: 8px;
+    }
+    .image-carousel img {
+      display: block;
+      width: 100%;
+      border-radius: 8px;
+      height: auto;
+      max-height: 400px;
+      object-fit: cover;
+    }
+    .carousel-btn {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      background: rgba(0,0,0,0.5);
+      border: none;
+      border-radius: 50%;
+      padding: 8px;
+      color: #fff;
+      cursor: pointer;
+      font-size: 18px;
+    }
+    .carousel-btn.left {
+      left: 8px;
+    }
+    .carousel-btn.right {
+      right: 8px;
+    }
+    .image-caption {
+      margin-top: 8px;
+      text-align: center;
+      font-size: 0.9rem;
+      color: #ccc;
+    }
+
+    /* ---------- Drone Model Icons (Tooltips) ---------- */
+    .drone-icons {
+      display: flex;
+      justify-content: space-around;
+      margin-top: 16px;
+    }
+    .drone-icon {
+      position: relative;
+      width: 48px;
+      height: 48px;
+      background: #4ade80;
+      border-radius: 8px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+    }
+
+    /* Tooltip */
+    .tooltip {
+      position: absolute;
+      bottom: 60px;
+      left: 50%;
+      transform: translateX(-50%);
+      background: #333;
+      padding: 8px;
+      border-radius: 4px;
+      color: #fff;
+      font-size: 0.85rem;
+      white-space: nowrap;
+      opacity: 0;
+      pointer-events: none;
+      transition: opacity 0.2s ease;
+      z-index: 10;
+    }
+    .drone-icon:hover .tooltip {
+      opacity: 1;
+      pointer-events: all;
+    }
+
+    /* ---------- Graphs and Metrics ---------- */
+    .graphs-section {
+      margin-top: 48px;
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 16px;
+    }
+    @media (min-width: 768px) {
+      .graphs-section {
+        grid-template-columns: repeat(3, 1fr);
+      }
+    }
+    .small-card {
+      background: #1f1f1f;
+      padding: 16px;
+      border-radius: 8px;
+      transition: transform 0.5s ease, opacity 0.5s ease;
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    .small-card.card-visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+    .small-card h2 {
+      font-size: 1.5rem;
+      margin-bottom: 16px;
+    }
+    .small-card .period-item {
+      display: flex;
+      justify-content: space-between;
+      margin-bottom: 8px;
+    }
+    .small-card .small-text {
+      margin-top: 16px;
+      font-size: 0.85rem;
+      color: #777;
+    }
+
+    /* ---------- Notifications Section as Pop-Up ---------- */
+    .notifications {
+      position: fixed;
+      top: 20px;
+      right: 20px;
+      background: #1f1f1f;
+      padding: 16px;
+      border-radius: 8px;
+      z-index: 1000;
+      width: 300px;
+      display: none; /* Hidden by default */
+      box-shadow: 0 0 10px rgba(0,0,0,0.5);
+    }
+    .notifications h2 {
+      font-size: 1.5rem;
+      margin-bottom: 16px;
+    }
+    .notification-item {
+      display: flex;
+      align-items: center;
+      margin-bottom: 8px;
+      font-size: 0.9rem;
+    }
+    .notification-indicator {
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+      margin-right: 8px;
+    }
+    .notification-indicator.green { background: #4ade80; }
+    .notification-indicator.yellow { background: #facc15; }
+    .notification-indicator.blue { background: #3b82f6; }
+
+    /* Close button for notifications */
+    .notifications-close-btn {
+      background: transparent;
+      border: none;
+      color: #aaa;
+      font-size: 1.2rem;
+      position: absolute;
+      top: 8px;
+      right: 8px;
+      cursor: pointer;
+    }
+    .notifications-close-btn:hover {
+      color: #fff;
+    }
+
+    /* ---------- Drone-Flying Hover Animation for Buttons ---------- */
+    button:hover {
+      filter: brightness(1.1);
+    }
+    button:active {
+      filter: brightness(0.95);
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Header -->
+  <header class="container">
+    <div class="logo-area">
+      <!-- Updated Logo Image -->
+      <img src="./assets/svg/logo.svg" alt="Pseglavius Drones Ltd">
+      <span>Pseglavius Drones Ltd</span>
+    </div>
+    <nav>
+      <a href="#">Investments</a>
+      <a href="#">Marketplace</a>
+      <a href="#">Team</a>
+      <a href="#">Drones</a>
+      <a href="#">Leaderboard</a>
+      <a href="#">Support</a>
+    </nav>
+    <div style="display:flex; align-items:center;">
+      <!-- Test Button -->
+      <button class="profile-btn" id="test-notifications-btn">Test Notifications</button>
+      <button class="profile-btn">Profile</button>
+    </div>
+  </header>
+
+  <!-- Main Content -->
+  <main class="container">
+    <!-- Left Column -->
+    <div style="display: flex; flex-direction: column; gap: 16px;">
+      <div class="card" id="card-account-level">
+        <h2>Account Level: Gold</h2>
+        <ul style="list-style: none; margin-bottom: 16px;">
+          <li>5% marketplace discount</li>
+          <li>Priority access to new upgrades</li>
+        </ul>
+        <div style="display: flex; justify-content: space-between; margin-bottom: 8px;">
+          <span>3/5 friends invited</span>
+          <span>Next: Platinum</span>
+        </div>
+        <div class="progress-bar-container">
+          <div class="progress-bar" id="progress-friends" style="width: 0%;"></div>
+        </div>
+        <p style="font-size: 0.85rem; color: #aaa; margin-top: 8px;">
+          2 more friends to reach Platinum level
+        </p>
+      </div>
+
+      <div class="card" id="card-rank-master">
+        <h2>Rank: Master</h2>
+        <p style="margin-bottom: 16px;">Based on cumulative drone flight hours</p>
+        <div style="display: flex; justify-content: space-between; margin-bottom: 8px;">
+          <span>2500/5000 hours</span>
+          <span>Next: Professional</span>
+        </div>
+        <div class="progress-bar-container">
+          <div class="progress-bar" id="progress-flight-hours" style="width: 0%;"></div>
+        </div>
+        <p style="font-size: 0.85rem; color: #aaa; margin-top: 8px;">
+          Reduce platform commission by 2% upon reaching 'Professional'
+        </p>
+      </div>
+
+      <div class="card" id="card-last-flight">
+        <h2>Last Flight Summary</h2>
+        <div style="margin-top: 8px;">
+          <p><strong>Delivery ID:</strong> #12345</p>
+          <p><strong>Duration:</strong> 45 minutes</p>
+          <p><strong>Distance:</strong> 15 km</p>
+          <p><strong>Payload:</strong> 5 kg</p>
+          <p><strong>Earnings:</strong> $25</p>
+        </div>
+      </div>
+
+      <button class="profile-btn" style="margin-top: 16px;" id="invite-btn">
+        Invite Friends
+      </button>
+    </div>
+
+    <!-- Central Column (Slides) -->
+    <div class="slide-container" id="slide-container">
+      <div class="slide-content" id="slide-content">
+        <!-- Populated by JavaScript -->
+      </div>
+      <button class="nav-btn left-btn" id="slide-prev">&#9664;</button>
+      <button class="nav-btn right-btn" id="slide-next">&#9654;</button>
+      <div class="slide-indicators" id="slide-indicators">
+        <!-- Populated by JavaScript -->
+      </div>
+    </div>
+
+    <!-- Right Column -->
+    <div style="display: flex; flex-direction: column; gap: 16px;">
+      <div class="image-carousel" id="image-carousel">
+        <img id="carousel-image" src="" alt="Drone in action">
+        <button class="carousel-btn left" id="img-prev">&#9664;</button>
+        <button class="carousel-btn right" id="img-next">&#9654;</button>
+        <p class="image-caption" id="image-caption">Drone performing last-mile delivery in downtown</p>
+      </div>
+
+      <div class="card" id="card-drone-model">
+        <h2>Drone Model</h2>
+        <img src="./assets/uploads/drone-model.png" alt="Drone Model" style="width: 100%; border-radius: 8px; margin-bottom: 16px;">
+        <div class="drone-icons">
+          <div class="drone-icon" id="battery-icon">
+            <!-- Battery Icon -->
+            <svg width="24" height="24" fill="none" stroke="#000" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <rect x="1" y="6" width="18" height="12" rx="2" ry="2"></rect>
+              <line x1="23" y1="13" x2="23" y2="11"></line>
+            </svg>
+            <div class="tooltip">Capacity: 8 hours<br>Charge time: 2 hours<br>Remaining cycles: 15</div>
+          </div>
+
+          <div class="drone-icon" id="fan-icon">
+            <!-- Fan Icon -->
+            <svg width="24" height="24" fill="none" stroke="#000" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M17.7 17.7C20.3 15.1 20.3 8.9 17.7 6.3 15.1 3.7 8.9 3.7 6.3 6.3 3.7 8.9 3.7 15.1 6.3 17.7c2.6 2.6 8.8 2.6 11.4 0z"></path>
+              <path d="M6.5 6.5l11 11"></path>
+            </svg>
+            <div class="tooltip">Material: Carbon fiber<br>Speed boost: +15%<br>Condition: 90%</div>
+          </div>
+
+          <div class="drone-icon" id="package-icon">
+            <!-- Package Icon -->
+            <svg width="24" height="24" fill="none" stroke="#000" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M21 16V8a2 2 0 00-2-2h-4.5L12 1 9.5 6H5a2 2 0 00-2 2v8a2 2 0 002 2h14a2 2 0 002-2z"></path>
+              <line x1="3" y1="12" x2="21" y2="12"></line>
+            </svg>
+            <div class="tooltip">Capacity: 10 kg<br>Type: Modular<br>Insulation: Basic</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <!-- Graphs and Metrics -->
+  <section class="container graphs-section" id="graphs-metrics">
+    <!-- Dynamically populated by JS -->
+  </section>
+
+  <!-- Notifications Pop-Up -->
+  <div class="notifications" id="notifications-section">
+    <button class="notifications-close-btn" id="notifications-close-btn">&times;</button>
+    <h2>Notifications</h2>
+    <ul style="list-style: none;">
+      <li class="notification-item">
+        <span class="notification-indicator green"></span>
+        Delivery completed: Order #12345
+      </li>
+      <li class="notification-item">
+        <span class="notification-indicator yellow"></span>
+        Maintenance required in 5 flight hours
+      </li>
+      <li class="notification-item">
+        <span class="notification-indicator blue"></span>
+        New marketplace discount available: 15% off batteries
+      </li>
+    </ul>
+  </div>
+
+  <!-- JavaScript Logic -->
+  <script>
+    /***********************
+     * Data / State
+     ***********************/
+    const slides = [
+      {
+        title: "Account Level – Gold",
+        description: "Enjoy a 10% discount on drone rentals and early access to premium delivery zones.",
+        cta: "Invite Friends",
+        ctaAction: () => console.log("Invite friends clicked")
+      },
+      {
+        title: "Drone Rank – Master",
+        description: "Free maintenance once a month, priority access to high-demand routes, and a 5% increase in overall flight efficiency.",
+        cta: "Send a Drone to Work",
+        ctaAction: () => console.log("Send drone to work clicked")
+      },
+      {
+        title: "Active Drone – Level 3",
+        description: "High-capacity battery, advanced propellers, and expanded cargo capacity for optimal performance.",
+        cta: "Go to Marketplace",
+        ctaAction: () => console.log("Go to marketplace clicked")
+      }
+    ];
+    const images = [
+      "./assets/uploads/drone-model.png",
+      "./assets/uploads/rank_grand_master.png",
+      "./assets/uploads/drone-model.png"
+    ];
+
+    let currentSlide = 0;
+    let currentImage = 0;
+
+    /***********************
+     * Slide Navigation
+     ***********************/
+    function renderSlide(index) {
+      const slideContainer = document.getElementById('slide-content');
+      slideContainer.innerHTML = `
+        <p class="slide-title">${slides[index].title}</p>
+        <h2>${slides[index].title}</h2>
+        <p>${slides[index].description}</p>
+        <button class="slide-button">${slides[index].cta}</button>
+      `;
+      // Slide CTA action
+      slideContainer.querySelector('button').addEventListener('click', slides[index].ctaAction);
+    }
+
+    function updateSlideIndicators() {
+      const indicators = document.getElementById('slide-indicators');
+      indicators.innerHTML = '';
+      slides.forEach((_, i) => {
+        const dot = document.createElement('div');
+        dot.className = 'slide-indicator-dot' + (i === currentSlide ? ' active' : '');
+        indicators.appendChild(dot);
+      });
+    }
+
+    function nextSlide() {
+      currentSlide = (currentSlide + 1) % slides.length;
+      renderSlide(currentSlide);
+      updateSlideIndicators();
+    }
+    function prevSlide() {
+      currentSlide = (currentSlide - 1 + slides.length) % slides.length;
+      renderSlide(currentSlide);
+      updateSlideIndicators();
+    }
+
+    /***********************
+     * Image Carousel
+     ***********************/
+    function renderImage(index) {
+      const carouselImage = document.getElementById('carousel-image');
+      carouselImage.src = images[index];
+      const captions = [
+        "Drone performing last-mile delivery in downtown",
+        "Rank: Grand Master - Advanced Drone Operations",
+        "Drone performing last-mile delivery in downtown"
+      ];
+      document.getElementById('image-caption').textContent = captions[index];
+    }
+    function nextImage() {
+      currentImage = (currentImage + 1) % images.length;
+      renderImage(currentImage);
+    }
+    function prevImage() {
+      currentImage = (currentImage - 1 + images.length) % images.length;
+      renderImage(currentImage);
+    }
+
+    /***********************
+     * Progress Bars
+     ***********************/
+    function initProgressBars() {
+      // Example values from code
+      document.getElementById('progress-friends').style.width = '60%';  // 3/5 = 60%
+      document.getElementById('progress-flight-hours').style.width = '50%';  // 2500/5000 = 50%
+    }
+
+    /***********************
+     * Graphs / Metrics
+     ***********************/
+    function createFlightHoursCard(period, index) {
+      const card = document.createElement('div');
+      card.className = 'small-card';
+      const randomProgress = Math.floor(Math.random() * 100);
+      card.innerHTML = `
+        <h2>Flight Hours Progress</h2>
+        <div class="period-item">
+          <span>${period}</span>
+          <span>${randomProgress} hours</span>
+        </div>
+        <div class="progress-bar-container">
+          <div class="progress-bar" style="width: ${randomProgress}%;"></div>
+        </div>
+      `;
+      return card;
+    }
+
+    function createEarningsCard(period, index) {
+      const earnings = Math.floor(Math.random() * 1000);
+      const card = document.createElement('div');
+      card.className = 'small-card';
+      card.innerHTML = `
+        <h2>Earnings Overview</h2>
+        <div class="period-item">
+          <span>${period}</span>
+          <span>$${earnings}</span>
+        </div>
+        <p class="small-text">Maximize earnings by reducing downtime through upgrades</p>
+      `;
+      return card;
+    }
+
+    function createDroneConditionCard() {
+      const card = document.createElement('div');
+      card.className = 'small-card';
+      card.innerHTML = `
+        <h2>Drone Condition</h2>
+        <div style="margin-bottom: 8px;">
+          <span style="font-size: 0.8rem; font-weight: bold; color:#4ade80; background: #4ade8022; padding:4px 8px; border-radius:16px;">Health</span>
+          <span style="float: right; font-size: 0.8rem; color: #4ade80;">85%</span>
+        </div>
+        <div class="progress-bar-container">
+          <div class="progress-bar" style="width: 85%;"></div>
+        </div>
+      `;
+      return card;
+    }
+
+    function initGraphsAndMetrics() {
+      const graphsSection = document.getElementById('graphs-metrics');
+      const flightPeriods = ['This Week', 'This Month', 'This Year'];
+      flightPeriods.forEach((period, index) => {
+        const card = createFlightHoursCard(period, index);
+        graphsSection.appendChild(card);
+      });
+
+      const earningPeriods = ['Daily', 'Weekly', 'Monthly'];
+      earningPeriods.forEach((period, index) => {
+        const card = createEarningsCard(period, index);
+        graphsSection.appendChild(card);
+      });
+
+      const conditionCard = createDroneConditionCard();
+      graphsSection.appendChild(conditionCard);
+    }
+
+    /***********************
+     * Smooth Appear on Scroll
+     ***********************/
+    function handleScrollAnimations() {
+      const cards = document.querySelectorAll('.card, .small-card');
+      cards.forEach((card) => {
+        const rect = card.getBoundingClientRect();
+        if (rect.top < window.innerHeight - 100) {
+          card.classList.add('card-visible');
+        }
+      });
+    }
+
+    /***********************
+     * Notifications Toggle
+     ***********************/
+    const notificationsSection = document.getElementById('notifications-section');
+    const testBtn = document.getElementById('test-notifications-btn');
+    const closeBtn = document.getElementById('notifications-close-btn');
+
+    testBtn.addEventListener('click', () => {
+      if (notificationsSection.style.display === 'none' || notificationsSection.style.display === '') {
+        notificationsSection.style.display = 'block';
+      } else {
+        notificationsSection.style.display = 'none';
+      }
+    });
+
+    closeBtn.addEventListener('click', () => {
+      notificationsSection.style.display = 'none';
+    });
+
+    /***********************
+     * Initialization
+     ***********************/
+    document.addEventListener('DOMContentLoaded', () => {
+      // Initialize slides
+      renderSlide(currentSlide);
+      updateSlideIndicators();
+
+      // Initialize image carousel
+      renderImage(currentImage);
+
+      // Initialize progress bars
+      initProgressBars();
+
+      // Initialize graphs
+      initGraphsAndMetrics();
+
+      // Attach event listeners
+      document.getElementById('slide-next').addEventListener('click', nextSlide);
+      document.getElementById('slide-prev').addEventListener('click', prevSlide);
+      document.getElementById('img-next').addEventListener('click', nextImage);
+      document.getElementById('img-prev').addEventListener('click', prevImage);
+
+      // Scroll animations
+      handleScrollAnimations();
+      window.addEventListener('scroll', handleScrollAnimations);
+    });
+  </script>
+</body>
+</html>
