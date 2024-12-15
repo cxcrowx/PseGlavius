@@ -1,64 +1,40 @@
-/* Обзор маркетплейса (#1) */
+document.addEventListener('DOMContentLoaded', function() {
+  // Initialize all Swiper instances
+  const swiperInstances = document.querySelectorAll('.swiper-99');
 
-$(function(){
-  var slideKey = 134;
-  if(!window.swipers){window.swipers = {};}
-  if(!window.swipers[slideKey]){window.swipers[slideKey] = [];}
-  $('.swiper-'+slideKey).each(function(){
-    var thisKey = window.swipers[slideKey].length;
-    window.swipers[slideKey][thisKey] = 
-      new Swiper(this, {
-      slidesPerView: 'auto',  
-      spaceBetween: 40,
-      centeredSlides: true,
-      breakpoints: {
-        435: {
-          centeredSlides: false,    
-          slidesPerView: 2, 
-        },
-        767: {
-          centeredSlides: false, 
-          slidesPerView: 3,   
-        },
-        991: {
-          centeredSlides: false, 
-          slidesPerView: 4,   
-        },              
-      }
-    });
-  });
-});
+  swiperInstances.forEach(function(swiperContainer) {
+    // Add navigation arrows
+    const prevButton = document.createElement('div');
+    prevButton.className = 'swiper-button-prev';
 
-/* Аккумуляторы (#2) */
+    const nextButton = document.createElement('div');
+    nextButton.className = 'swiper-button-next';
 
-$(function(){
-  var slideKey = 99;
-  if(!window.swipers){window.swipers = {};}
-  if(!window.swipers[slideKey]){window.swipers[slideKey] = [];}
-  $('.swiper-'+slideKey).each(function(){
-    var thisKey = window.swipers[slideKey].length;
-    window.swipers[slideKey][thisKey] = 
-      new Swiper(this, {
-      slidesPerView: 1,
-      spaceBetween: 20,
-      pagination: {
-        el: this.querySelector('.swiper-pagination'),
-        clickable: true,
-      },
-      autoplay: {
-        delay: 3000,
-        disableOnInteraction: true,
+    swiperContainer.appendChild(prevButton);
+    swiperContainer.appendChild(nextButton);
+
+    // Initialize Swiper
+    new Swiper(swiperContainer, {
+      slidesPerView: 3,
+      spaceBetween: 30,
+      loop: true,
+      navigation: {
+        nextEl: nextButton,
+        prevEl: prevButton,
       },
       breakpoints: {
-        436: {
-          slidesPerView: 2,
+        320: {
+          slidesPerView: 1,
+          spaceBetween: 10
         },
         768: {
-          slidesPerView: 3,
+          slidesPerView: 2,
+          spaceBetween: 20
         },
         1024: {
-          slidesPerView: 4,
-        },
+          slidesPerView: 3,
+          spaceBetween: 30
+        }
       }
     });
   });
