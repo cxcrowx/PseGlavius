@@ -5,20 +5,24 @@
     <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1.0">
     <meta name="apple-mobile-web-app-capable" content="yes" />
     <base href="./">
-    <title>marketplace.html - D2T</title>
-    <meta property="og:title" content="marketplace.html - D2T" />
-    <meta name="twitter:title" content="marketplace.html - D2T" />
+    <title>Drone Marketplace - D2T</title>
+    <meta property="og:title" content="Drone Marketplace - D2T" />
+    <meta name="twitter:title" content="Drone Marketplace - D2T" />
     <link rel="icon" sizes="any" href="assets/svg/favicon-default.svg" type="image/svg+xml">
 
     <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin>
-    <link href="css/slides-customized.min.css?p=r4esObv0&rnd=688093" rel="stylesheet" type="text/css" id="js-slides-css">
-
+    <link href="css/slides-customized.min.css?p=r4esObv0" rel="stylesheet" type="text/css">
+    <link href="css/custom_4p7W1iMS.css?p=r4esObv0" rel="stylesheet" type="text/css">
+    <link href="css/swiper.min.css" rel="stylesheet" type="text/css">
+    
+    <!-- Owl Carousel CSS -->
+    <link href="https://cdn.rawgit.com/OwlCarousel2/OwlCarousel2/develop/dist/assets/owl.carousel.min.css" rel="stylesheet" type="text/css">
+    <link href="https://cdn.rawgit.com/OwlCarousel2/OwlCarousel2/develop/dist/assets/owl.theme.default.min.css" rel="stylesheet" type="text/css">
 
     <!-- Fonts and Material Icons -->
-    <link rel="stylesheet" as="font" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&family=Material+Icons&display=swap" id="js-google-fonts"/>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&family=Material+Icons&display=swap"/>
 
-
-    <style type="text/css" id="js-slides-fonts">
+    <style type="text/css">
         .slides,
         .slides p {
             font-family: "Inter", -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen-Sans,Ubuntu,Cantarell,"Helvetica Neue",sans-serif;
@@ -38,366 +42,173 @@
             font-family: "Inter", -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen-Sans,Ubuntu,Cantarell,"Helvetica Neue",sans-serif;
             font-weight: 500;
         }
+        
+        /* Owl Carousel Custom Styles */
+        .owl-carousel .item {
+            padding: 20px;
+            background: white;
+            border-radius: 8px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+        }
+        .owl-carousel .item img {
+            width: 100%;
+            height: auto;
+            border-radius: 6px;
+        }
+        .owl-carousel .item-content {
+            padding: 15px 0;
+        }
+        .owl-theme .owl-nav {
+            margin-top: 20px;
+        }
+        .owl-theme .owl-dots .owl-dot span {
+            background: rgba(255,255,255,0.5);
+        }
+        .owl-theme .owl-dots .owl-dot.active span {
+            background: white;
+        }
     </style>
-<link href="css/swiper.min.css" rel="stylesheet" type="text/css">
-<link href="css/custom_4p7W1iMS.css?p=r4esObv0&rnd=122168" rel="stylesheet" type="text/css">
     <link rel="preload" href="assets/svg/icon-set.svg?p=r4esObv0" as="image" type="image/svg+xml" crossorigin>
-
 </head>
 <body class="slides animated noPreload">
 <!-- Navigation -->
-<nav class="side ">
+<nav class="side">
   <div class="navigation default">
     <ul></ul>
   </div>
 </nav>
 
 <!-- Slide 1: Marketplace Overview -->
-<section data-cid="slide-134-050a1c2c" class="slide fade-6" style="background-image: url('assets/img/background/Marketplace1.webp'); background-size: cover; background-position: center;">
-  <div class="content">
-    <div class="container">
-      <div class="wrap align-left">
-        <div class="fix-12-12">
-          <ul class="margin-bottom-3 flex bottom">
-            <li class="margin-bottom-phablet-3 col-6-12 col-tablet-2-5 col-phablet-1-1">
-              <h1 class="crop smaller fromLeft ae-1">Drone Marketplace</h1>
-            </li>
-            <li class="col-6-12 col-tablet-3-5 col-phablet-1-1">
-              <ul class="controller controller-134 align-right phablet-align-left fromRight" data-slider-id="slider-134">
-                <li class="inlineBlock margin-right-3 margin-bottom-phone-1 selected ae-2">
-                  <p class="crop smallest uppercase bold">All</p>
-                </li>
-                <li class="inlineBlock margin-right-3 margin-bottom-phone-1 ae-2">
-                  <p class="crop smallest uppercase bold">Batteries</p>
-                </li>
-                <li class="inlineBlock margin-right-3 margin-bottom-phone-1 ae-3">
-                  <p class="crop smallest uppercase bold">Propellers</p>
-                </li>
-                <li class="inlineBlock ae-4">
-                  <p class="crop smallest uppercase bold">Motors</p>
-                </li>
-              </ul>
-            </li>
-          </ul>
-          <p class="larger opacity-8 margin-bottom-4">Reinvest your profits into powerful upgrades to maximize your drone fleet's potential.</p>
-
-          <!-- Category Blocks -->
-          <div class="swiper-134">
-            <div class="swiper-wrapper flex equal noSpaces">
-              <!-- Batteries Category -->
-              <div class="swiper-slide equalElement noText ae-3 fromCenter">
-                <a href="#" class="box-134">
-                  <div class="thumbnail-134 rounded shadow">
-                    <img src="assets/img/Battary/Batt2.webp" alt="Standard Drone Battery" class="wide rounded"/>
-                    <div class="caption-134 rounded">
-                      <h3 class="smaller margin-bottom-1">Standard Battery</h3>
-                      <p class="tiny opacity-8">Basic power solution</p>
-                      <div class="margin-top-2">
-                        <span class="button small white rounded cropSides cropBottom">View Details</span>
-                      </div>
-                    </div>
-                  </div>
-                </a>
-              </div>
-
-              <!-- Propeller 1 Block -->
-              <div class="swiper-slide equalElement noText ae-4 fromCenter">
-                <a href="#" class="box-134">
-                  <div class="thumbnail-134 rounded shadow">
-                    <img src="assets/img/Propellers/Prop1.webp" alt="High-Performance Propeller" class="wide rounded"/>
-                    <div class="caption-134 rounded">
-                      <h3 class="smaller margin-bottom-1">Elite Propeller</h3>
-                      <p class="tiny opacity-8">Maximum thrust</p>
-                      <div class="margin-top-2">
-                        <span class="button small white rounded cropSides cropBottom">View Details</span>
-                      </div>
-                    </div>
-                  </div>
-                </a>
-              </div>
-
-              <!-- Propeller 2 Block -->
-              <div class="swiper-slide equalElement noText ae-4 fromCenter">
-                <a href="#" class="box-134">
-                  <div class="thumbnail-134 rounded shadow">
-                    <img src="assets/img/Propellers/Prop2.webp" alt="Advanced Propeller" class="wide rounded"/>
-                    <div class="caption-134 rounded">
-                      <h3 class="smaller margin-bottom-1">Pro Propeller</h3>
-                      <p class="tiny opacity-8">Enhanced efficiency</p>
-                      <div class="margin-top-2">
-                        <span class="button small white rounded cropSides cropBottom">View Details</span>
-                      </div>
-                    </div>
-                  </div>
-                </a>
-              </div>
-
-              <!-- Propeller 3 Block -->
-              <div class="swiper-slide equalElement noText ae-4 fromCenter">
-                <a href="#" class="box-134">
-                  <div class="thumbnail-134 rounded shadow">
-                    <img src="assets/img/Propellers/Prop3.webp" alt="Premium Propeller" class="wide rounded"/>
-                    <div class="caption-134 rounded">
-                      <h3 class="smaller margin-bottom-1">Ultra Propeller</h3>
-                      <p class="tiny opacity-8">Superior performance</p>
-                      <div class="margin-top-2">
-                        <span class="button small white rounded cropSides cropBottom">View Details</span>
-                      </div>
-                    </div>
-                  </div>
-                </a>
-              </div>
-
-              <!-- Motor 1 Block -->
-              <div class="swiper-slide equalElement noText ae-5 fromCenter">
-                <a href="#" class="box-134">
-                  <div class="thumbnail-134 rounded shadow">
-                    <img src="assets/img/Motors/Mot2.webp" alt="High-Performance Motor" class="wide rounded"/>
-                    <div class="caption-134 rounded">
-                      <h3 class="smaller margin-bottom-1">Elite Motor</h3>
-                      <p class="tiny opacity-8">Powerful performance</p>
-                      <div class="margin-top-2">
-                        <span class="button small white rounded cropSides cropBottom">View Details</span>
-                      </div>
-                    </div>
-                  </div>
-                </a>
-              </div>
-
-              <!-- Motor 2 Block -->
-              <div class="swiper-slide equalElement noText ae-5 fromCenter">
-                <a href="#" class="box-134">
-                  <div class="thumbnail-134 rounded shadow">
-                    <img src="assets/img/Motors/Mot3.webp" alt="Advanced Motor" class="wide rounded"/>
-                    <div class="caption-134 rounded">
-                      <h3 class="smaller margin-bottom-1">Pro Motor</h3>
-                      <p class="tiny opacity-8">Enhanced control</p>
-                      <div class="margin-top-2">
-                        <span class="button small white rounded cropSides cropBottom">View Details</span>
-                      </div>
-                    </div>
-                  </div>
-                </a>
-              </div>
-
-              <!-- Motor 3 Block -->
-              <div class="swiper-slide equalElement noText ae-5 fromCenter">
-                <a href="#" class="box-134">
-                  <div class="thumbnail-134 rounded shadow">
-                    <img src="assets/img/Motors/Mot4.webp" alt="Premium Motor" class="wide rounded"/>
-                    <div class="caption-134 rounded">
-                      <h3 class="smaller margin-bottom-1">Ultra Motor</h3>
-                      <p class="tiny opacity-8">Maximum efficiency</p>
-                      <div class="margin-top-2">
-                        <span class="button small white rounded cropSides cropBottom">View Details</span>
-                      </div>
-                    </div>
-                  </div>
-                </a>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- Slide 2: Batteries and Technical Upgrades -->
-<section data-cid="slide-99-f3c86e9f" class="slide fade-6 kenBurns" style="background-image: url('assets/img/background/Marketplace2.webp'); background-size: cover; background-position: center;">
+<section class="slide fade-6 kenBurns">
   <div class="content">
     <div class="container">
       <div class="wrap">
         <div class="fix-12-12">
-          <h2 class="margin-bottom-2 ae-1">High-Capacity Batteries</h2>
-          <div class="swiper-99">
-            <div class="swiper-wrapper" style="display: flex; align-items: stretch;">
-              <div class="swiper-slide equalElement noText ae-3 fromCenter" style="height: auto;">
-                <div class="pad rounded" style="background: linear-gradient(rgba(255, 255, 255, 0.95), rgba(255, 255, 255, 0.95)); height: 100%; display: flex; flex-direction: column;">
-                  <div class="margin-bottom-2 text-center" style="height: 200px; display: flex; align-items: center; justify-content: center;">
-                    <img src="assets/img/Battary/Batt1.webp" alt="Standard Battery" style="max-width: 200px; max-height: 180px; object-fit: contain;"/>
-                  </div>
-                  <div style="flex-grow: 1; display: flex; flex-direction: column; justify-content: space-between;">
-                    <div>
-                      <h3 class="margin-bottom-1">Standard Battery</h3>
-                      <p class="tiny opacity-6 margin-bottom-2">Reliable performance</p>
-                    </div>
-                    <div>
-                      <p class="price largest bold margin-bottom-3">$299</p>
-                      <a href="#" class="button blue gradient wide cropSides cropBottom">Add to Cart</a>
-                    </div>
-                  </div>
-                </div>
-              </div>
+          <!-- Header and Navigation -->
+          <ul class="flex reverse margin-bottom-3">
+            <li class="col-6-12 left">
+              <h1 class="ae-1 fromLeft">Drone Marketplace</h1>
+              <div class="ae-2 fromLeft"><p class="larger opacity-8">Reinvest your profits into powerful upgrades to maximize your drone fleet's potential.</p></div>
+            </li>
+            <li class="col-6-12">
+              <ul class="flex later fromRight">
+                <li class="col-3-12"><a class="button small white rounded cropSides cropBottom ae-3">All</a></li>
+                <li class="col-3-12"><a class="button small white rounded cropSides cropBottom ae-4">Batteries</a></li>
+                <li class="col-3-12"><a class="button small white rounded cropSides cropBottom ae-5">Propellers</a></li>
+                <li class="col-3-12"><a class="button small white rounded cropSides cropBottom ae-6">Motors</a></li>
+              </ul>
+            </li>
+          </ul>
 
-              <div class="swiper-slide equalElement noText ae-3 fromCenter" style="height: auto;">
-                <div class="pad rounded" style="background: linear-gradient(rgba(255, 255, 255, 0.95), rgba(255, 255, 255, 0.95)); height: 100%; display: flex; flex-direction: column;">
-                  <div class="margin-bottom-2 text-center" style="height: 200px; display: flex; align-items: center; justify-content: center;">
-                    <img src="assets/img/Battary/Batt5.webp" alt="Ultra Battery" style="max-width: 200px; max-height: 180px; object-fit: contain;"/>
-                  </div>
-                  <div style="flex-grow: 1; display: flex; flex-direction: column; justify-content: space-between;">
-                    <div>
-                      <h3 class="margin-bottom-1">Ultra Battery</h3>
-                      <p class="tiny opacity-6 margin-bottom-2">Maximum endurance</p>
-                    </div>
-                    <div>
-                      <p class="price largest bold margin-bottom-3">$599</p>
-                      <a href="#" class="button blue gradient wide cropSides cropBottom">Add to Cart</a>
-                    </div>
+          <!-- Category Grid -->
+          <ul class="grid equal margin-top-5">
+            <!-- Batteries Category -->
+            <li class="col-3-12 ae-3 fromCenter">
+              <div class="box rounded equalElement">
+                <div class="thumbnail rounded shadow">
+                  <img src="assets/img/Battary/Batt2.webp" alt="Standard Drone Battery" class="wide rounded"/>
+                  <div class="caption rounded">
+                    <h3 class="smaller margin-bottom-1">Standard Battery</h3>
+                    <p class="tiny opacity-8">Basic power solution</p>
+                    <a class="button small blue gradient rounded cropSides cropBottom margin-top-2">View Details</a>
                   </div>
                 </div>
               </div>
-
-              <div class="swiper-slide equalElement noText ae-3 fromCenter" style="height: auto;">
-                <div class="pad rounded" style="background: linear-gradient(rgba(255, 255, 255, 0.95), rgba(255, 255, 255, 0.95)); height: 100%; display: flex; flex-direction: column;">
-                  <div class="margin-bottom-2 text-center" style="height: 200px; display: flex; align-items: center; justify-content: center;">
-                    <img src="assets/img/Battary/Batt8.webp" alt="Supreme Battery" style="max-width: 200px; max-height: 180px; object-fit: contain;"/>
-                  </div>
-                  <div style="flex-grow: 1; display: flex; flex-direction: column; justify-content: space-between;">
-                    <div>
-                      <h3 class="margin-bottom-1">Supreme Battery</h3>
-                      <p class="tiny opacity-6 margin-bottom-2">Supreme power delivery</p>
-                    </div>
-                    <div>
-                      <p class="price largest bold margin-bottom-3">$699</p>
-                      <a href="#" class="button blue gradient wide cropSides cropBottom">Add to Cart</a>
-                    </div>
-                  </div>
-                </div>
-              </div>
-
-              <div class="swiper-slide equalElement noText ae-3 fromCenter" style="height: auto;">
-                <div class="pad rounded" style="background: linear-gradient(rgba(255, 255, 255, 0.95), rgba(255, 255, 255, 0.95)); height: 100%; display: flex; flex-direction: column;">
-                  <div class="margin-bottom-2 text-center" style="height: 200px; display: flex; align-items: center; justify-content: center;">
-                    <img src="assets/img/Battary/Batt2.webp" alt="Advanced Battery" style="max-width: 200px; max-height: 180px; object-fit: contain;"/>
-                  </div>
-                  <div style="flex-grow: 1; display: flex; flex-direction: column; justify-content: space-between;">
-                    <div>
-                      <h3 class="margin-bottom-1">Advanced Battery</h3>
-                      <p class="tiny opacity-6 margin-bottom-2">Enhanced durability</p>
-                    </div>
-                    <div>
-                      <p class="price largest bold margin-bottom-3">$349</p>
-                      <a href="#" class="button blue gradient wide cropSides cropBottom">Add to Cart</a>
-                    </div>
-                  </div>
-                </div>
-              </div>
-
-              <div class="swiper-slide equalElement noText ae-3 fromCenter" style="height: auto;">
-                <div class="pad rounded" style="background: linear-gradient(rgba(255, 255, 255, 0.95), rgba(255, 255, 255, 0.95)); height: 100%; display: flex; flex-direction: column;">
-                  <div class="margin-bottom-2 text-center" style="height: 200px; display: flex; align-items: center; justify-content: center;">
-                    <img src="assets/img/Battary/Batt3.webp" alt="Pro Battery" style="max-width: 200px; max-height: 180px; object-fit: contain;"/>
-                  </div>
-                  <div style="flex-grow: 1; display: flex; flex-direction: column; justify-content: space-between;">
-                    <div>
-                      <h3 class="margin-bottom-1">Pro Battery</h3>
-                      <p class="tiny opacity-6 margin-bottom-2">Professional grade power</p>
-                    </div>
-                    <div>
-                      <p class="price largest bold margin-bottom-3">$449</p>
-                      <a href="#" class="button blue gradient wide cropSides cropBottom">Add to Cart</a>
-                    </div>
-                  </div>
-                </div>
-              </div>
-
-              <div class="swiper-slide equalElement noText ae-3 fromCenter" style="height: auto;">
-                <div class="pad rounded" style="background: linear-gradient(rgba(255, 255, 255, 0.95), rgba(255, 255, 255, 0.95)); height: 100%; display: flex; flex-direction: column;">
-                  <div class="margin-bottom-2 text-center" style="height: 200px; display: flex; align-items: center; justify-content: center;">
-                    <img src="assets/img/Battary/Batt4.webp" alt="Elite Battery" style="max-width: 200px; max-height: 180px; object-fit: contain;"/>
-                  </div>
-                  <div style="flex-grow: 1; display: flex; flex-direction: column; justify-content: space-between;">
-                    <div>
-                      <h3 class="margin-bottom-1">Elite Battery</h3>
-                      <p class="tiny opacity-6 margin-bottom-2">Elite performance</p>
-                    </div>
-                    <div>
-                      <p class="price largest bold margin-bottom-3">$499</p>
-                      <a href="#" class="button blue gradient wide cropSides cropBottom">Add to Cart</a>
-                    </div>
-                  </div>
-                </div>
-              </div>
-
-              <div class="swiper-slide equalElement noText ae-3 fromCenter" style="height: auto;">
-                <div class="pad rounded" style="background: linear-gradient(rgba(255, 255, 255, 0.95), rgba(255, 255, 255, 0.95)); height: 100%; display: flex; flex-direction: column;">
-                  <div class="margin-bottom-2 text-center" style="height: 200px; display: flex; align-items: center; justify-content: center;">
-                    <img src="assets/img/Battary/Batt6.webp" alt="Premium Battery" style="max-width: 200px; max-height: 180px; object-fit: contain;"/>
-                  </div>
-                  <div style="flex-grow: 1; display: flex; flex-direction: column; justify-content: space-between;">
-                    <div>
-                      <h3 class="margin-bottom-1">Premium Battery</h3>
-                      <p class="tiny opacity-6 margin-bottom-2">Premium power solution</p>
-                    </div>
-                    <div>
-                      <p class="price largest bold margin-bottom-3">$549</p>
-                      <a href="#" class="button blue gradient wide cropSides cropBottom">Add to Cart</a>
-                    </div>
-                  </div>
-                </div>
-              </div>
-
-              <div class="swiper-slide equalElement noText ae-3 fromCenter" style="height: auto;">
-                <div class="pad rounded" style="background: linear-gradient(rgba(255, 255, 255, 0.95), rgba(255, 255, 255, 0.95)); height: 100%; display: flex; flex-direction: column;">
-                  <div class="margin-bottom-2 text-center" style="height: 200px; display: flex; align-items: center; justify-content: center;">
-                    <img src="assets/img/Battary/Batt7.webp" alt="Performance Battery" style="max-width: 200px; max-height: 180px; object-fit: contain;"/>
-                  </div>
-                  <div style="flex-grow: 1; display: flex; flex-direction: column; justify-content: space-between;">
-                    <div>
-                      <h3 class="margin-bottom-1">Performance Battery</h3>
-                      <p class="tiny opacity-6 margin-bottom-2">High-performance power</p>
-                    </div>
-                    <div>
-                      <p class="price largest bold margin-bottom-3">$649</p>
-                      <a href="#" class="button blue gradient wide cropSides cropBottom">Add to Cart</a>
-                    </div>
-                  </div>
-                </div>
-              </div>
-
-              <div class="swiper-slide equalElement noText ae-3 fromCenter" style="height: auto;">
-                <div class="pad rounded" style="background: linear-gradient(rgba(255, 255, 255, 0.95), rgba(255, 255, 255, 0.95)); height: 100%; display: flex; flex-direction: column;">
-                  <div class="margin-bottom-2 text-center" style="height: 200px; display: flex; align-items: center; justify-content: center;">
-                    <img src="assets/img/Battary/Batt9.webp" alt="Master Battery" style="max-width: 200px; max-height: 180px; object-fit: contain;"/>
-                  </div>
-                  <div style="flex-grow: 1; display: flex; flex-direction: column; justify-content: space-between;">
-                    <div>
-                      <h3 class="margin-bottom-1">Master Battery</h3>
-                      <p class="tiny opacity-6 margin-bottom-2">Master-grade power</p>
-                    </div>
-                    <div>
-                      <p class="price largest bold margin-bottom-3">$749</p>
-                      <a href="#" class="button blue gradient wide cropSides cropBottom">Add to Cart</a>
-                    </div>
-                  </div>
-                </div>
-              </div>
-
-              <div class="swiper-slide equalElement noText ae-3 fromCenter" style="height: auto;">
-                <div class="pad rounded" style="background: linear-gradient(rgba(255, 255, 255, 0.95), rgba(255, 255, 255, 0.95)); height: 100%; display: flex; flex-direction: column;">
-                  <div class="margin-bottom-2 text-center" style="height: 200px; display: flex; align-items: center; justify-content: center;">
-                    <img src="assets/img/Battary/Batt10.webp" alt="Ultimate Battery" style="max-width: 200px; max-height: 180px; object-fit: contain;"/>
-                  </div>
-                  <div style="flex-grow: 1; display: flex; flex-direction: column; justify-content: space-between;">
-                    <div>
-                      <h3 class="margin-bottom-1">Ultimate Battery</h3>
-                      <p class="tiny opacity-6 margin-bottom-2">Ultimate power performance</p>
-                    </div>
-                    <div>
-                      <p class="price largest bold margin-bottom-3">$849</p>
-                      <a href="#" class="button blue gradient wide cropSides cropBottom">Add to Cart</a>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="swiper-pagination ae-3"></div>
-          </div>
+            </li>
+          </ul>
         </div>
       </div>
     </div>
   </div>
+  <div class="background" style="background-image:url('assets/img/background/Marketplace1.webp')"></div>
+</section>
+
+<!-- Slide 2: Batteries and Technical Upgrades -->
+<section class="slide fade-6 kenBurns">
+  <div class="content">
+    <div class="container">
+      <div class="wrap">
+        <div class="fix-12-12">
+          <h2 class="ae-1 fromLeft margin-bottom-3">High-Capacity Batteries</h2>
+          
+          <ul class="grid equal">
+            <!-- Standard Battery -->
+            <li class="col-3-12 ae-2 fromCenter">
+              <div class="box rounded white">
+                <div class="thumbnail rounded">
+                  <img src="assets/img/Battary/Batt1.webp" alt="Standard Battery" class="wide"/>
+                </div>
+                <div class="details padding-2">
+                  <h3 class="smaller margin-bottom-1">Standard Battery</h3>
+                  <p class="tiny opacity-8">Entry-level power solution for basic drone operations</p>
+                  <div class="price margin-top-3">
+                    <span class="currency">$</span>
+                    <span class="amount">99</span>
+                  </div>
+                  <a class="button small blue gradient rounded cropSides cropBottom margin-top-2">Purchase</a>
+                </div>
+              </div>
+            </li>
+
+            <!-- Advanced Battery -->
+            <li class="col-3-12 ae-3 fromCenter">
+              <div class="box rounded white">
+                <div class="thumbnail rounded">
+                  <img src="assets/img/Battary/Batt2.webp" alt="Advanced Battery" class="wide"/>
+                </div>
+                <div class="details padding-2">
+                  <h3 class="smaller margin-bottom-1">Advanced Battery</h3>
+                  <p class="tiny opacity-8">Enhanced capacity for extended flight time</p>
+                  <div class="price margin-top-3">
+                    <span class="currency">$</span>
+                    <span class="amount">149</span>
+                  </div>
+                  <a class="button small blue gradient rounded cropSides cropBottom margin-top-2">Purchase</a>
+                </div>
+              </div>
+            </li>
+
+            <!-- Premium Battery -->
+            <li class="col-3-12 ae-4 fromCenter">
+              <div class="box rounded white">
+                <div class="thumbnail rounded">
+                  <img src="assets/img/Battary/Batt6.webp" alt="Premium Battery" class="wide"/>
+                </div>
+                <div class="details padding-2">
+                  <h3 class="smaller margin-bottom-1">Premium Battery</h3>
+                  <p class="tiny opacity-8">Professional-grade power for demanding missions</p>
+                  <div class="price margin-top-3">
+                    <span class="currency">$</span>
+                    <span class="amount">199</span>
+                  </div>
+                  <a class="button small blue gradient rounded cropSides cropBottom margin-top-2">Purchase</a>
+                </div>
+              </div>
+            </li>
+
+            <!-- Ultimate Battery -->
+            <li class="col-3-12 ae-5 fromCenter">
+              <div class="box rounded white">
+                <div class="thumbnail rounded">
+                  <img src="assets/img/Battary/Batt10.webp" alt="Ultimate Battery" class="wide"/>
+                </div>
+                <div class="details padding-2">
+                  <h3 class="smaller margin-bottom-1">Ultimate Battery</h3>
+                  <p class="tiny opacity-8">Maximum capacity for uninterrupted performance</p>
+                  <div class="price margin-top-3">
+                    <span class="currency">$</span>
+                    <span class="amount">249</span>
+                  </div>
+                  <a class="button small blue gradient rounded cropSides cropBottom margin-top-2">Purchase</a>
+                </div>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="background" style="background-image:url('assets/img/background/Marketplace2.webp')"></div>
 </section>
 
 <!-- Slide 3: Propellers -->
